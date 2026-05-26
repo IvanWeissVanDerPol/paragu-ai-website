@@ -34,5 +34,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: paragu-ai-website
           directory: out
-          gitHubTokenName: GITHUB_TOKEN
           wranglerVersion: '3'
