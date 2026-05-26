@@ -28,7 +28,7 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://paragu-ai.com
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@latest
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
