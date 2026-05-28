@@ -220,9 +220,9 @@ export const PLANS = [
     badge: null,
     popular: false,
     description:
-      'Tu primer sitio profesional. 7 meses con todo desbloqueado — después seguis con las features de tu plan.',
+      'Tu primer sitio profesional con dominio propio. Los primeros 7 meses incluídos.',
     features: [
-      { text: '7 meses con experiencia Profesional completa', included: true },
+      { text: '7 meses con todas las features desbloqueadas', included: true },
       { text: 'Hasta 5 páginas', included: true },
       { text: 'Dominio propio .com.py incluido 1 año', included: true },
       { text: 'Hasta 15 fotos optimizadas', included: true },
@@ -233,7 +233,7 @@ export const PLANS = [
     ],
     cta: 'Comenzar Presencia',
     waMsg:
-      'Hola, me interesa el plan Presencia (Gs 650.000 + 100.000/mes, con 7 meses Profesional incluidos).',
+      'Hola, me interesa el plan Presencia (Gs 650.000 + 100.000/mes).',
   },
   {
     id: 'crecimiento',
@@ -243,9 +243,9 @@ export const PLANS = [
     badge: 'Más recomendado',
     popular: true,
     description:
-      'Reservas, blog y catálogo de productos. 8 meses con todo desbloqueado.',
+      'Reservas online, blog y catálogo de productos. Los primeros 8 meses incluídos.',
     features: [
-      { text: '8 meses con experiencia Profesional completa', included: true },
+      { text: '8 meses con todas las features desbloqueadas', included: true },
       { text: 'Todo lo de Presencia + páginas ilimitadas', included: true },
       { text: 'Sistema de reservas online', included: true },
       { text: 'Catálogo con hasta 20 productos', included: true },
@@ -256,7 +256,7 @@ export const PLANS = [
     ],
     cta: 'Comenzar Crecimiento',
     waMsg:
-      'Hola, me interesa el plan Crecimiento (Gs 1.200.000 + 150.000/mes, con 8 meses Profesional incluidos).',
+      'Hola, me interesa el plan Crecimiento (Gs 1.200.000 + 150.000/mes).',
   },
   {
     id: 'profesional',
