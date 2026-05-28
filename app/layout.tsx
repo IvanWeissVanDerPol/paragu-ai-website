@@ -54,6 +54,12 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        {/* Cloudflare Web Analytics — privacy-friendly, no cookies */}
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={"{\"token\": \"b2fd8c3a8a2f4d8e9c1b3a4d5e6f7g8h\"}"}
+        />
       </head>
       <body className="antialiased">{children}</body>
     </html>

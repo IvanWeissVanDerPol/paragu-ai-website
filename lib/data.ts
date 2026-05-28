@@ -73,18 +73,11 @@ export const CLIENTS = [
     slug: 'magnolia-peluqueria',
   },
   {
-    name: 'Cocodrilo Fitness',
+    name: 'Complejo Cocodrilo',
     url: 'https://cocodrilofitness.paragu-ai.com',
     rubro: 'Gimnasio / Fitness',
-    desc: 'Gimnasio con equipamiento de primera',
+    desc: 'Gimnasio con pileta climatizada, sauna y clases en Asunción',
     slug: 'cocodrilofitness',
-  },
-  {
-    name: 'Luis de León Concept',
-    url: 'https://luisdeleon.paragu-ai.com',
-    rubro: 'Estética',
-    desc: 'Centro de estética y bienestar',
-    slug: 'luis-de-leon',
   },
 ] as const
 
@@ -195,29 +188,29 @@ export const GUARANTEES = [
   { title: 'Sin permanencia', desc: 'Cancelás cuando quieras, te llevás tu dominio.' },
 ] as const
 
-// ── Plans ────────────────────────────────────────────────────────────────
+// ── Plans ───────────────────────────────────────────────────────────────
 export const PLANS = [
   {
     id: 'prueba',
     name: 'Prueba',
     setup: 'Gratis',
-    monthly: '3 meses',
+    monthly: null,
     badge: null,
     popular: false,
     description:
       'Probá todo lo que ofrecemos antes de pagar nada. Sin tarjeta, sin compromiso.',
     features: [
-      { text: '3 meses con experiencia Profesional completa', included: true },
-      { text: 'Subdominio nombre.paragu-ai.com', included: true },
+      { text: 'Tu sitio en subdominio .paragu-ai.com', included: true },
       { text: 'WhatsApp + Google Maps + SSL', included: true },
       { text: 'Soporte por WhatsApp', included: true },
-      { text: 'Después: sitio sigue online con marca ParaguAI', included: true },
+      { text: 'Demo lista en 48h', included: true },
+      { text: 'Después: seguís online (marca ParaguAI) o pasás a plan pago', included: true },
       { text: 'Dominio propio (.com.py)', included: false },
       { text: 'Sin marca ParaguAI', included: false },
     ],
     cta: 'Pedir demo gratis',
     waMsg:
-      'Hola, quiero probar ParaguAI gratis (3 meses Profesional) para mi negocio.',
+      'Hola, quiero una demo gratis de mi sitio web con ParaguAI.',
   },
   {
     id: 'presencia',

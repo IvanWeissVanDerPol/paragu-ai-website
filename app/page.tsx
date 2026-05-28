@@ -41,6 +41,7 @@ function Nav() {
     { href: '/clientes', label: 'Clientes' },
     { href: '/precios', label: 'Precios' },
     { href: '/metodo', label: 'Método' },
+    { href: '/sobre-nosotros', label: 'Nosotros' },
   ]
 
   return (
@@ -146,6 +147,7 @@ function Footer() {
                 { href: '/clientes', label: 'Clientes' },
                 { href: '/precios', label: 'Precios' },
                 { href: '/metodo', label: 'Método' },
+                { href: '/sobre-nosotros', label: 'Nosotros' },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="hover:text-white transition-colors">
@@ -237,12 +239,14 @@ function PlanCard({
 
       <div className="mb-6">
         <p className="text-3xl font-bold text-gray-900">{plan.setup}</p>
-        <p className="mt-1 text-sm text-gray-500">
-          plus {plan.monthly}{' '}
-          <span className="text-xs text-gray-400">
-            (después del período incluido)
-          </span>
-        </p>
+        {plan.monthly && (
+          <p className="mt-1 text-sm text-gray-500">
+            plus {plan.monthly}{' '}
+            <span className="text-xs text-gray-400">
+              (después del período incluido)
+            </span>
+          </p>
+        )}
       </div>
 
       <ul className="mb-8 space-y-3 text-sm">
@@ -323,7 +327,7 @@ function Hero() {
 
           {/* trust bar */}
           <p className="mt-12 text-xs text-gray-400">
-            Más de 250 sitios publicados en Paraguay
+            +12 sitios reales funcionando en Paraguay
           </p>
         </div>
 

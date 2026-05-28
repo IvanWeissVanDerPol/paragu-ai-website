@@ -24,9 +24,11 @@ function PlanDetail({ plan }: { plan: (typeof PLANS)[number] }) {
       <h3 className="text-xl font-bold text-gray-900">{plan.name}</h3>
       <div className="mt-2 mb-6">
         <p className="text-3xl font-extrabold">{plan.setup}</p>
-        <p className="mt-1 text-sm text-gray-500">
-          + {plan.monthly} thereafter
-        </p>
+        {plan.monthly && (
+          <p className="mt-1 text-sm text-gray-500">
+            + {plan.monthly} thereafter
+          </p>
+        )}
       </div>
       <p className="mb-6 text-sm text-gray-600">{plan.description}</p>
       <ul className="mb-8 space-y-3">
