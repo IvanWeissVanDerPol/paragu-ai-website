@@ -32,6 +32,7 @@ import {
   FAQS,
   TESTIMONIALS,
 } from '@/lib/data'
+import ClientImage from '@/components/ClientImage'
 
 // ── Nav ────────────────────────────────────────────────────────────────
 function Nav() {
@@ -471,11 +472,12 @@ function ClientsPreview() {
               rel="noopener"
               className="group rounded-2xl border border-gray-200 bg-white overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="flex aspect-video items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 p-4">
-                <div className="text-center text-gray-400">
-                  <Globe size={24} className="mx-auto mb-1 opacity-50" />
-                  <p className="text-xs">{c.rubro}</p>
-                </div>
+              <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
+                <ClientImage
+                  src={`/screenshots/${c.slug}.jpg`}
+                  alt={`${c.name} preview`}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-4">
                 <span className="mb-2 inline-block rounded-full bg-gray-50 px-2.5 py-1 text-xs font-semibold text-gray-500">
