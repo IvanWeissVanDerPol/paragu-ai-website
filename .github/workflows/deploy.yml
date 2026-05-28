@@ -1,6 +1,4 @@
-name: Deploy to Cloudflare Pages
-
-on:
+"on":
   push:
     branches: [main]
   workflow_dispatch:
@@ -18,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
@@ -28,7 +26,7 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_WHATSAPP: ${{ secrets.NEXT_PUBLIC_WHATSAPP }}
-          NEXT_PUBLIC_SITE_URL: https://paragu-ai.com
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
@@ -38,3 +36,5 @@ jobs:
           projectName: paragu-ai-builder
           directory: out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: 3
+
