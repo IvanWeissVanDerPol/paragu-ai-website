@@ -7,7 +7,8 @@ import { waLink } from '@/lib/utils'
 import {
   CLIENTS,
 } from '@/lib/data'
-import Image from 'next/image'
+import ClientImage from '@/components/ClientImage'
+
 
 export const metadata: Metadata = {
   title: 'Sitios Reales · ParaguAI',
@@ -45,13 +46,10 @@ export default function ClientesPage() {
                 className="group rounded-2xl border border-gray-200 bg-white overflow-hidden transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
-                  <Image
-                    src={`/screenshots/${c.slug}.svg`}
+                  <ClientImage
+                    src={`/screenshots/${c.slug}.jpg`}
                     alt={`${c.name} — ${c.rubro}`}
-                    width={640}
-                    height={360}
                     className="w-full h-full object-cover"
-                    unoptimized
                   />
                 </div>
                 <div className="p-5">

@@ -54,12 +54,22 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        {/* Cloudflare Web Analytics — privacy-friendly, no cookies */}
-        <script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon={"{\"token\": \"b2fd8c3a8a2f4d8e9c1b3a4d5e6f7g8h\"}"}
-        />
+        {/* Google Analytics — replace NEXT_PUBLIC_GA_ID in .env.local */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="antialiased">{children}</body>
     </html>
