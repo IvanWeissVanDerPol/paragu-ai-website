@@ -327,7 +327,7 @@ function Hero() {
 
           {/* trust bar */}
           <p className="mt-12 text-xs text-gray-400">
-            +12 sitios reales funcionando en Paraguay
+            +5 sitios reales funcionando en Paraguay
           </p>
         </div>
 

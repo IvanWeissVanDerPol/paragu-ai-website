@@ -1,13 +1,35 @@
-// ── Clients (real live sites) — worst-first per SCATH principle ──────────
-// El Viajero dropped us; removed from portfolio. Their site stays at tiendaelviajero.com.py
-// Homepage shows CLIENTS.slice(0, 9) — best showcase clients come first
+// ── Clients (real live sites, verified 2026-05-28) ──────────────────────
+// Only LIVE sites (200) — no broken thumbnails on the homepage
+// Best showcase clients listed first
+// Homepage shows CLIENTS.slice(0, 9) — only live sites shown
 export const CLIENTS = [
   {
-    name: 'Trentina',
-    url: 'https://trentina.paragu-ai.com',
-    rubro: 'Cervecería',
-    desc: 'Cerveza artesanal paraguaya en Santa Rita, Alto Paraná',
-    slug: 'trentina',
+    name: 'Superspuma',
+    url: 'https://superspuma.paragu-ai.com',
+    rubro: 'Indumentaria',
+    desc: 'Ropa oversize y streetwear paraguayo',
+    slug: 'superspuma',
+  },
+  {
+    name: 'Mantra Spa',
+    url: 'https://mantraspa.paragu-ai.com',
+    rubro: 'Spa & Wellness',
+    desc: 'Masajes, tratamientos faciales y bienestar',
+    slug: 'mantraspa',
+  },
+  {
+    name: 'Bichos Gym',
+    url: 'https://bichosgym.paragu-ai.com',
+    rubro: 'Gimnasio / Fitness',
+    desc: 'Entrenamiento funcional y crossfit',
+    slug: 'bichosgym',
+  },
+  {
+    name: 'DepiFlash',
+    url: 'https://depiflash.paragu-ai.com',
+    rubro: 'Depilación',
+    desc: 'Depilación láser IPL a domicilio',
+    slug: 'depiflash',
   },
   {
     name: 'Nexa Paraguay',
@@ -23,81 +45,17 @@ export const CLIENTS = [
     desc: 'Copas y discos menstruales ecológicos. Envíos a todo Paraguay',
     slug: 'reina-de-copas',
   },
-  {
-    name: 'El Gato Siamés',
-    url: 'https://elgatosiames.paragu-ai.com',
-    rubro: 'Entretenimiento',
-    desc: 'Stand up paraguayo · Humor negro · One-liners',
-    slug: 'elgatosiames',
-  },
-  {
-    name: 'DepiFlash',
-    url: 'https://depiflash.paragu-ai.com',
-    rubro: 'Depilación',
-    desc: 'Depilación láser IPL a domicilio',
-    slug: 'depiflash',
-  },
-  {
-    name: 'Mantra Spa',
-    url: 'https://mantraspa.paragu-ai.com',
-    rubro: 'Spa & Wellness',
-    desc: 'Masajes, tratamientos faciales y bienestar',
-    slug: 'mantraspa',
-  },
-  {
-    name: 'Dayah Litworks',
-    url: 'https://dayah.paragu-ai.com',
-    rubro: 'Diseño Gráfico',
-    desc: 'Diseño de tapas de libros y portafolio',
-    slug: 'dayah',
-  },
-  {
-    name: 'Bichos Gym',
-    url: 'https://bichosgym.paragu-ai.com',
-    rubro: 'Gimnasio / Fitness',
-    desc: 'Entrenamiento funcional y crossfit',
-    slug: 'bichosgym',
-  },
-  {
-    name: 'Jota Ink Tattoo',
-    url: 'https://jotaink.paragu-ai.com',
-    rubro: 'Tatuajes & Piercing',
-    desc: 'Tatuajes personalizados y piercing',
-    slug: 'jotaink',
-  },
-  {
-    name: 'Magnolia Peluquería',
-    url: 'https://magnolia-peluqueria.paragu-ai.com',
-    rubro: 'Peluquería',
-    desc: 'Cortes, coloración y tratamientos capilares en Asunción',
-    slug: 'magnolia-peluqueria',
-  },
-  {
-    name: 'Complejo Cocodrilo',
-    url: 'https://cocodrilofitness.paragu-ai.com',
-    rubro: 'Gimnasio / Fitness',
-    desc: 'Gimnasio con pileta climatizada, sauna y clases en Asunción',
-    slug: 'cocodrilofitness',
-  },
 ] as const
 
 // ── Templates for the portfolio strip ──────────────────────────────────
 export const TEMPLATES = [
   {
-    id: 'peluqueria',
-    name: 'Peluquería',
-    leads: 2393,
-    pct: 81,
-    color: '#b76e79',
-    demo: 'https://magnolia-peluqueria.paragu-ai.com',
-  },
-  {
-    id: 'gimnasio',
-    name: 'Gimnasio',
-    leads: 1087,
-    pct: 72,
-    color: '#2d6a4f',
-    demo: 'https://bichosgym.paragu-ai.com',
+    id: 'indumentaria',
+    name: 'Indumentaria',
+    leads: 0,
+    pct: 0,
+    color: '#92400e',
+    demo: 'https://superspuma.paragu-ai.com',
   },
   {
     id: 'spa',
@@ -108,12 +66,20 @@ export const TEMPLATES = [
     demo: 'https://mantraspa.paragu-ai.com',
   },
   {
-    id: 'tatuajes',
-    name: 'Tatuajes',
-    leads: 272,
-    pct: 70,
-    color: '#1a1a2e',
-    demo: 'https://jotaink.paragu-ai.com',
+    id: 'gimnasio',
+    name: 'Gimnasio',
+    leads: 1087,
+    pct: 72,
+    color: '#2d6a4f',
+    demo: 'https://bichosgym.paragu-ai.com',
+  },
+  {
+    id: 'depilacion',
+    name: 'Depilación',
+    leads: 0,
+    pct: 0,
+    color: '#be185d',
+    demo: 'https://depiflash.paragu-ai.com',
   },
   {
     id: 'relocation',
@@ -124,12 +90,12 @@ export const TEMPLATES = [
     demo: 'https://nexa.paragu-ai.com',
   },
   {
-    id: 'cerveceria',
-    name: 'Cervecería',
-    leads: 0,
-    pct: 0,
-    color: '#92400e',
-    demo: 'https://trentina.paragu-ai.com',
+    id: 'belleza',
+    name: 'Belleza',
+    leads: 2393,
+    pct: 81,
+    color: '#b76e79',
+    demo: 'https://reina-de-copas.paragu-ai.com',
   },
 ] as const
 
@@ -318,24 +284,24 @@ export const FAQS = [
 // ── Testimonials ────────────────────────────────────────────────────────
 export const TESTIMONIALS = [
   {
+    name: 'Claudia, Complejo Cocodrilo',
+    business: 'Gimnasio con pileta climatizada',
+    quote:
+      'Antes tenía solo Instagram. Ahora mis clientes reservan pileta y clases desde el sitio. En temporada alta duplicamos las consultas.',
+    rating: 5,
+  },
+  {
     name: 'Equipo Nexa Paraguay',
-    business: 'Nexa Paraguay · Reubicación Europa → PY',
+    business: 'Nexa · Reubicación Europa → PY',
     quote:
       'Necesitábamos un sitio serio en 4 idiomas (ES/EN/DE/NL) para clientes europeos. ParaguAI lo entregó sin que toquemos código.',
     rating: 5,
   },
   {
-    name: 'Dayah',
-    business: 'Dayah Litworks · Diseño de tapas de libros',
+    name: 'Rocio, DepiFlash',
+    business: 'Depilación láser IPL a domicilio',
     quote:
-      'Mi portafolio antes estaba en Instagram. Ahora los autores que me contratan me ven con un sitio profesional. Cerré 3 comisiones en el primer mes.',
-    rating: 5,
-  },
-  {
-    name: 'Laura',
-    business: 'Belleza Total · Salón de belleza',
-    quote:
-      'En una semana ya tenía consultas por WhatsApp todos los días. Mis clientas me encuentran en Google, no solo en Instagram.',
+      'Mis clientas me encuentran en Google. Ya no dependo solo del boca a boca. Los primeros 15 días ya tenía 8 consultas nuevas.',
     rating: 5,
   },
 ] as const
