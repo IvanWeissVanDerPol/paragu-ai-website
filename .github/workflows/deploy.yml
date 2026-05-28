@@ -35,6 +35,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: paragu-ai-website
+          projectName: paragu-ai-builder
           directory: out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
