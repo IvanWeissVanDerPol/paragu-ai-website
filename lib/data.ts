@@ -38,13 +38,6 @@ export const CLIENTS = [
     desc: 'Programa de reubicación para europeos (4 idiomas)',
     slug: 'nexa',
   },
-  {
-    name: 'Reina de Copas',
-    url: 'https://reina-de-copas.paragu-ai.com',
-    rubro: 'Salud',
-    desc: 'Copas y discos menstruales ecológicos. Envíos a todo Paraguay',
-    slug: 'reina-de-copas',
-  },
 ] as const
 
 // ── Templates for the portfolio strip ──────────────────────────────────
@@ -95,7 +88,7 @@ export const TEMPLATES = [
     leads: 2393,
     pct: 81,
     color: '#b76e79',
-    demo: 'https://reina-de-copas.paragu-ai.com',
+    demo: 'https://mantraspa.paragu-ai.com',
   },
 ] as const
 
@@ -284,10 +277,10 @@ export const FAQS = [
 // ── Testimonials ────────────────────────────────────────────────────────
 export const TESTIMONIALS = [
   {
-    name: 'Claudia, Complejo Cocodrilo',
-    business: 'Gimnasio con pileta climatizada',
+    name: 'Rocio, DepiFlash',
+    business: 'Depilación láser IPL a domicilio',
     quote:
-      'Antes tenía solo Instagram. Ahora mis clientes reservan pileta y clases desde el sitio. En temporada alta duplicamos las consultas.',
+      'Mis clientas me encuentran en Google. Ya no dependo solo del boca a boca. Los primeros 15 días ya tenía 8 consultas nuevas.',
     rating: 5,
   },
   {
@@ -295,13 +288,6 @@ export const TESTIMONIALS = [
     business: 'Nexa · Reubicación Europa → PY',
     quote:
       'Necesitábamos un sitio serio en 4 idiomas (ES/EN/DE/NL) para clientes europeos. ParaguAI lo entregó sin que toquemos código.',
-    rating: 5,
-  },
-  {
-    name: 'Rocio, DepiFlash',
-    business: 'Depilación láser IPL a domicilio',
-    quote:
-      'Mis clientas me encuentran en Google. Ya no dependo solo del boca a boca. Los primeros 15 días ya tenía 8 consultas nuevas.',
     rating: 5,
   },
 ] as const
