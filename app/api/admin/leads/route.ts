@@ -1,53 +1,49 @@
+import { supabaseAdmin } from '@/lib/supabase-admin'
 import { NextResponse } from 'next/server'
-import { readAdminState, writeAdminState } from '@/lib/admin-store'
-import type { LeadStatus } from '@/lib/admin-full-data'
 
-const VALID_STATUS: LeadStatus[] = ['new', 'contacted', 'demo', 'negotiating', 'won', 'lost']
+const VALID_STATUS = ['new', 'contacted', 'demo', 'negotiating', 'won', 'lost']
 
 export async function GET() {
-  const state = await readAdminState()
-  return NextResponse.json({ data: state.leads })
+  try {
+    const { data, error } = await supabaseAdmin
+      .from('leads')
+      .select('*')
+      .order('priority_score', { ascending: false })
+    if (error) throw error
+    return NextResponse.json({ data })
+  } catch (e: any) {
+    return NextResponse.json({ error: e.message }, { status: 500 })
+  }
 }
 
 export async function PATCH(req: Request) {
   try {
     const body = await req.json()
-    const id = typeof body?.id === 'string' ? body.id : ''
-    const status = body?.status as LeadStatus | undefined
-    const assignedTo = typeof body?.assignedTo === 'string' ? body.assignedTo : undefined
-    const nextAction = typeof body?.nextAction === 'string' ? body.nextAction : undefined
-
+    const { id, status } = body
     if (!id) return NextResponse.json({ error: 'id is required' }, { status: 400 })
     if (status && !VALID_STATUS.includes(status)) {
       return NextResponse.json({ error: 'invalid status' }, { status: 400 })
     }
 
-    const state = await readAdminState()
-    const index = state.leads.findIndex((lead) => lead.id === id)
-    if (index < 0) return NextResponse.json({ error: 'lead not found' }, { status: 404 })
+    const updates: Record<string, any> = { updated_at: new Date().toISOString() }
+    if (status) updates.status = status
 
-    const prev = state.leads[index]
-    const next = {
-      ...prev,
-      status: status ?? prev.status,
-      assignedTo: assignedTo ?? prev.assignedTo,
-      nextAction: nextAction ?? prev.nextAction,
-      lastContact: new Date().toISOString().slice(0, 10),
-    }
+    const { data, error } = await supabaseAdmin
+      .from('leads')
+      .update(updates)
+      .eq('id', id)
+      .select()
+      .single()
+    if (error) throw error
 
-    state.leads[index] = next
-    state.activity.unshift({
-      id: `act-${Date.now()}`,
-      date: new Date().toISOString(),
-      action: `Lead status updated (${prev.status} → ${next.status})`,
-      user: 'admin',
-      target: next.business,
-      targetId: next.id,
+    await supabaseAdmin.from('pa_activity').insert({
+      action: `Lead status updated → ${status}`,
+      entity_type: 'lead',
+      entity_id: id,
+      details: { status },
     })
-
-    await writeAdminState(state)
-    return NextResponse.json({ ok: true, data: next })
-  } catch {
-    return NextResponse.json({ error: 'invalid request body' }, { status: 400 })
+    return NextResponse.json({ ok: true, data })
+  } catch (e: any) {
+    return NextResponse.json({ error: e.message }, { status: 500 })
   }
 }

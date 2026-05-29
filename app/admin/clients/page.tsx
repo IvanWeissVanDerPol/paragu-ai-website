@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { ADMIN_CLIENTS } from '@/lib/admin-data'
-import { DEPLOYMENTS } from '@/lib/admin-full-data'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 type ClientItem = typeof ADMIN_CLIENTS[0] & { currentOrder: number }

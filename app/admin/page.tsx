@@ -1,8 +1,15 @@
 'use client'
 
-import { useState } from 'react'
-import { ADMIN_CLIENTS } from '@/lib/admin-data'
-import { LEADS, REVENUE, DEPLOYMENTS } from '@/lib/admin-full-data'
+import { useState, useEffect } from 'react'
+import { adminFetchJson } from '@/lib/admin-fetch'
+
+interface ClientRow {
+  id: string; name: string; slug: string; url: string; rubro: string
+  type: string; status: string; plan: string | null; reviews: number | null; leads: number | null; github_url: string | null
+}
+interface LeadRow { id: string; business: string; score: number; distance_km: number; reviews: number; status: string }
+interface RevenueRow { id: string; client_slug: string; plan: string; monthly_gs: number; setup_gs: number; status: string; start_date: string; next_renewal_at: string | null }
+interface SummaryData { clients: ClientRow[]; leads: LeadRow[]; mrr: number; payingCount: number; revenue: RevenueRow[] }
 
 // Stats card component
 function StatCard({ label, value, sub, color }: { label: string; value: string; sub?: string; color: string }) {
@@ -42,18 +49,30 @@ function StatusBadge({ status }: { status: string }) {
 }
 
 export default function DashboardPage() {
+  const [data, setData] = useState<SummaryData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [filter, setFilter] = useState('all')
   const [search, setSearch] = useState('')
 
-  const paying = ADMIN_CLIENTS.filter(c => c.type === 'paying')
-  const live = ADMIN_CLIENTS.filter(c => c.status === 'live')
-  const mrr = REVENUE.reduce((sum, r) => sum + r.monthlyGs, 0) / 1000000
-  const mrrFormatted = `Gs ${mrr.toFixed(1)}M`
-  const activeLeads = LEADS.filter(l => !['won', 'lost'].includes(l.status))
-  const topLeads = LEADS.filter(l => l.score >= 80).slice(0, 5)
-  const deployingCount = DEPLOYMENTS.filter(d => d.status !== 'running').length
+  useEffect(() => {
+    adminFetchJson<SummaryData>('/api/admin/summary/')
+      .then(setData)
+      .catch(e => setError(e instanceof Error ? e.message : 'Failed to load'))
+      .finally(() => setLoading(false))
+  }, [])
 
-  const filtered = ADMIN_CLIENTS.filter(c => {
+  if (loading) return <div style={{ padding: 32, color: '#9ca3af' }}>Loading dashboard...</div>
+  if (error || !data) return <div style={{ padding: 32, color: '#f87171' }}>{error || 'No data'}</div>
+
+  const { clients, leads, mrr, payingCount, revenue } = data
+  const paying = clients.filter(c => c.type === 'paying')
+  const live = clients.filter(c => c.status === 'live')
+  const mrrFormatted = `Gs ${(mrr / 1000000).toFixed(1)}M`
+  const activeLeads = leads.filter(l => !['won', 'lost'].includes(l.status))
+  const topLeads = leads.filter(l => l.score >= 80).slice(0, 5)
+
+  const filtered = clients.filter(c => {
     if (filter !== 'all' && c.type !== filter && c.status !== filter) return false
     if (search && !c.name.toLowerCase().includes(search.toLowerCase())) return false
     return true
@@ -69,12 +88,12 @@ export default function DashboardPage() {
 
       {/* Stats */}
       <div style={{ display: 'flex', gap: 16, marginBottom: 32, flexWrap: 'wrap' }}>
-        <StatCard label="Total Clients" value="30" sub="4 paying" color="#a855f7" />
-        <StatCard label="MRR" value={mrrFormatted} sub="4 active plans" color="#22c55e" />
+        <StatCard label="Total Clients" value={String(clients.length)} sub={`${payingCount} paying`} color="#a855f7" />
+        <StatCard label="MRR" value={mrrFormatted} sub={`${revenue.length} active plans`} color="#22c55e" />
         <StatCard label="Active Leads" value={String(activeLeads.length)} sub="pipeline" color="#f59e0b" />
-        <StatCard label="Top Score" value="133.2" sub="Estudio Medieval" color="#3b82f6" />
-        <StatCard label="Deployments" value={String(DEPLOYMENTS.length)} sub={deployingCount > 0 ? `${deployingCount} degraded` : 'all healthy'} color="#06b6d4" />
-        <StatCard label="Won this month" value="4" sub="4 paying clients" color="#22c55e" />
+        <StatCard label="Top Score" value={topLeads.length > 0 ? String(topLeads[0].score) : '—'} sub={topLeads.length > 0 ? topLeads[0].business : 'N/A'} color="#3b82f6" />
+        <StatCard label="Live Sites" value={String(live.length)} sub={clients.length - live.length > 0 ? `${clients.length - live.length} not live` : 'all live'} color="#06b6d4" />
+        <StatCard label="Paying Clients" value={String(payingCount)} sub="active subscribers" color="#22c55e" />
       </div>
 
       {/* Top Leads + Revenue */}
@@ -93,11 +112,11 @@ export default function DashboardPage() {
               </tr>
             </thead>
             <tbody>
-              {topLeads.map((lead, i) => (
+              {topLeads.map((lead) => (
                 <tr key={lead.id} style={{ borderTop: '1px solid #1a1a24' }}>
                   <td style={{ padding: '10px 0', fontWeight: 600 }}>{lead.business}</td>
                   <td style={{ padding: '10px 0', color: '#22c55e', fontWeight: 700 }}>{lead.score}</td>
-                  <td style={{ padding: '10px 0', color: '#666' }}>{lead.distanceKm}km</td>
+                  <td style={{ padding: '10px 0', color: '#666' }}>{lead.distance_km}km</td>
                   <td style={{ padding: '10px 0', color: '#666' }}>{lead.reviews}</td>
                   <td style={{ padding: '10px 0' }}><StatusBadge status={lead.status} /></td>
                 </tr>
@@ -119,12 +138,12 @@ export default function DashboardPage() {
               </tr>
             </thead>
             <tbody>
-              {REVENUE.map((r, i) => (
-                <tr key={r.clientId} style={{ borderTop: '1px solid #1a1a24' }}>
-                  <td style={{ padding: '10px 0', fontWeight: 600 }}>{r.name}</td>
+              {revenue.map((r) => (
+                <tr key={r.id} style={{ borderTop: '1px solid #1a1a24' }}>
+                  <td style={{ padding: '10px 0', fontWeight: 600 }}>{r.client_slug}</td>
                   <td style={{ padding: '10px 0', color: '#a855f7' }}>{r.plan}</td>
-                  <td style={{ padding: '10px 0', fontWeight: 700 }}>Gs {(r.monthlyGs / 100000).toFixed(0)}K</td>
-                  <td style={{ padding: '10px 0', color: '#666' }}>{r.nextRenewal}</td>
+                  <td style={{ padding: '10px 0', fontWeight: 700 }}>Gs {(r.monthly_gs / 100000).toFixed(0)}K</td>
+                  <td style={{ padding: '10px 0', color: '#666' }}>{r.next_renewal_at ? new Date(r.next_renewal_at).toLocaleDateString() : '—'}</td>
                 </tr>
               ))}
             </tbody>
@@ -136,27 +155,27 @@ export default function DashboardPage() {
       <div style={{ background: '#111118', border: '1px solid #1a1a24', borderRadius: 12, padding: 24, marginBottom: 32 }}>
         <h2 style={{ fontSize: 16, fontWeight: 700, marginBottom: 16 }}>📂 Clients by Rubro</h2>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          {[
-            { rubro: 'Barbería', count: 6, color: '#92400e' },
-            { rubro: 'Spa & Wellness', count: 5, color: '#7c9885' },
-            { rubro: 'Belleza', count: 7, color: '#b76e79' },
-            { rubro: 'Gimnasio', count: 3, color: '#2d6a4f' },
-            { rubro: 'Uñas / Nails', count: 3, color: '#be185d' },
-            { rubro: 'Maquillaje', count: 2, color: '#9333ea' },
-            { rubro: 'Tatuajes', count: 2, color: '#1e3a5f' },
-            { rubro: 'Otros', count: 2, color: '#475569' },
-          ].map(r => (
-            <div key={r.rubro} style={{
-              background: '#0a0a0f',
-              border: `1px solid ${r.color}33`,
-              borderRadius: 8,
-              padding: '12px 16px',
-              minWidth: 120
-            }}>
-              <div style={{ fontSize: 20, fontWeight: 800, color: r.color }}>{r.count}</div>
-              <div style={{ fontSize: 12, color: '#666' }}>{r.rubro}</div>
-            </div>
-          ))}
+          {(() => {
+            const rubroMap: Record<string, { count: number; color: string }> = {}
+            const colors = ['#92400e', '#7c9885', '#b76e79', '#2d6a4f', '#be185d', '#9333ea', '#1e3a5f', '#475569']
+            let ci = 0
+            for (const c of clients) {
+              if (!rubroMap[c.rubro]) { rubroMap[c.rubro] = { count: 0, color: colors[ci++ % colors.length] } }
+              rubroMap[c.rubro].count++
+            }
+            return Object.entries(rubroMap).map(([rubro, { count, color }]) => (
+              <div key={rubro} style={{
+                background: '#0a0a0f',
+                border: `1px solid ${color}33`,
+                borderRadius: 8,
+                padding: '12px 16px',
+                minWidth: 120
+              }}>
+                <div style={{ fontSize: 20, fontWeight: 800, color }}>{count}</div>
+                <div style={{ fontSize: 12, color: '#666' }}>{rubro}</div>
+              </div>
+            ))
+          })()}
         </div>
       </div>
 
@@ -225,8 +244,8 @@ export default function DashboardPage() {
                 <td style={{ padding: '12px 0' }}><StatusBadge status={c.status} /></td>
                 <td style={{ padding: '12px 0', color: '#666', fontSize: 12 }}>{c.plan || '-'}</td>
                 <td style={{ padding: '12px 0' }}>
-                  {c.githubUrl ? (
-                    <a href={c.githubUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#666', fontSize: 16 }}>📦</a>
+                  {c.github_url ? (
+                    <a href={c.github_url} target="_blank" rel="noopener noreferrer" style={{ color: '#666', fontSize: 16 }}>📦</a>
                   ) : '-'}
                 </td>
               </tr>
