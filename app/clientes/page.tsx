@@ -4,9 +4,7 @@ import { ExternalLink, ArrowRight } from 'lucide-react'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { waLink } from '@/lib/utils'
-import {
-  CLIENTS,
-} from '@/lib/data'
+import { getSortedClients } from '@/lib/getSortedClients'
 import ClientImage from '@/components/ClientImage'
 
 
@@ -37,7 +35,7 @@ export default function ClientesPage() {
 
           {/* worst-first per memory instructions */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {CLIENTS.map((c) => (
+            {getSortedClients().map((c) => (
               <a
                 key={c.slug}
                 href={c.url}

@@ -1,0 +1,31 @@
+// Initial client order — edit from /admin/clients to reorder
+// Lower number = higher position on page
+// This file is mirrored to /public/client-order.json and drives the live site order
+export const INITIAL_ORDER: Record<string, number> = {
+  'hidrobaby-spa': 1,
+  'cronos-academy': 2,
+  'clau-bellino': 3,
+  'barbye-nails': 4,
+  'woman-cosmeticos': 5,
+  'scott-tatuajes': 6,
+  'avani-belleza': 7,
+  'viviesteticpy': 8,
+  'estudio-medieval': 9,
+  'arnos-barber-shop': 10,
+  'reinadecopas': 11,
+  'fun4me': 12,
+  'leticia-carballo': 13,
+  'nutrifit-spa': 14,
+  'lele-ferreira': 15,
+  'magnolia-peluqueria': 16,
+  'bichosgym': 17,
+  'magnolia-flower': 18,
+  'mantraspa': 19,
+  'depiflash': 20,
+  'nexa': 21,
+  'superspuma': 22,
+  'xxgym': 23,
+  'portas-barber': 24,
+  'nde-barba': 25,
+  'shine-nails': 26,
+}

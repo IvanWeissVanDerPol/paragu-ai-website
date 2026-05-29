@@ -1,14 +1,155 @@
-// ── Clients (real live sites, verified 2026-05-28) ──────────────────────
-// Only LIVE sites (200) — no broken thumbnails on the homepage
-// Best showcase clients listed first
-// Homepage shows CLIENTS.slice(0, 9) — only live sites shown
+// ── Clients ─────────────────────────────────────────────────────────────────
+// Order: lower number = higher position on page.
+// Sorted by: demo quality (review count) → paying clients last.
+// Homepage: CLIENTS.slice(0, 9). Full portfolio: /clientes
+// NOTE: client-order.json in /public overrides this order.
+// Admin panel at /admin/clients can save new order → GitHub → redeploy.
 export const CLIENTS = [
+  // ── DEMO SITES (non-paying clients / prospects — live on .paragu-ai.com) ──
   {
-    name: 'Superspuma',
-    url: 'https://superspuma.paragu-ai.com',
-    rubro: 'Indumentaria',
-    desc: 'Ropa oversize y streetwear paraguayo',
-    slug: 'superspuma',
+    name: 'HidroBaby Spa',
+    url: 'https://hidrobaby-spa.paragu-ai.com',
+    rubro: 'Spa / Baby Spa',
+    desc: 'Baby spa, pediátrico y prenatal — 3 sucursales en Paraguay',
+    slug: 'hidrobaby-spa',
+    order: 1,
+  },
+  {
+    name: 'Cronos Academy',
+    url: 'https://cronos-academy.paragu-ai.com',
+    rubro: 'Gimnasio / Crossfit',
+    desc: 'Academia crossfit y functional training en San Lorenzo',
+    slug: 'cronos-academy',
+    order: 2,
+  },
+  {
+    name: 'Clau Bellino',
+    url: 'https://clau-bellino.paragu-ai.com',
+    rubro: 'Estética Facial',
+    desc: 'Tratamientos faciales y depilación láser',
+    slug: 'clau-bellino',
+    order: 3,
+  },
+  {
+    name: 'Barbye Nails',
+    url: 'https://barbye-nails.paragu-ai.com',
+    rubro: 'Uñas / Nail Art',
+    desc: 'Nail art y manicuria en Fernando de la Mora',
+    slug: 'barbye-nails',
+    order: 4,
+  },
+  {
+    name: 'Woman Cosméticos',
+    url: 'https://woman-cosmeticos.paragu-ai.com',
+    rubro: 'Cosméticos',
+    desc: 'Cosméticos y cuidado personal',
+    slug: 'woman-cosmeticos',
+    order: 5,
+  },
+  {
+    name: 'Scott Tatuajes',
+    url: 'https://scott-tatuajes.paragu-ai.com',
+    rubro: 'Tatuajes',
+    desc: 'Estudio de tatuajes realista y cover-up',
+    slug: 'scott-tatuajes',
+    order: 6,
+  },
+  {
+    name: 'Avani Belleza',
+    url: 'https://avani-belleza.paragu-ai.com',
+    rubro: 'Belleza Integral',
+    desc: 'Salón de belleza, maquillaje y peinado',
+    slug: 'avani-belleza',
+    order: 7,
+  },
+  {
+    name: 'Viviesteticpy',
+    url: 'https://viviesteticpy.paragu-ai.com',
+    rubro: 'Belleza / Microblading',
+    desc: 'Microblading, pestañas y estética avanzada',
+    slug: 'viviesteticpy',
+    order: 8,
+  },
+  {
+    name: 'Estudio Medieval',
+    url: 'https://estudio-medieval.paragu-ai.com',
+    rubro: 'Barbería',
+    desc: 'Barbería vintage con 388+ reseñas Google',
+    slug: 'estudio-medieval',
+    order: 9,
+  },
+  {
+    name: "Arno's Barber Shop",
+    url: 'https://arnos-barber-shop.paragu-ai.com',
+    rubro: 'Barbería',
+    desc: 'Barbería moderna en Fernando de la Mora',
+    slug: 'arnos-barber-shop',
+    order: 10,
+  },
+  {
+    name: 'Reinadecopas',
+    url: 'https://reinadecopas.paragu-ai.com',
+    rubro: 'Cerveza Artesanal',
+    desc: 'Tienda online de cerveza artesanal paraguaya',
+    slug: 'reinadecopas',
+    order: 11,
+  },
+  {
+    name: 'Fun4Me',
+    url: 'https://fun4me.paragu-ai.com',
+    rubro: 'Eventos / Kids',
+    desc: 'Eventos infantiles y cumpleaños',
+    slug: 'fun4me',
+    order: 12,
+  },
+  {
+    name: 'Leticia Carballo',
+    url: 'https://leticia-carballo.paragu-ai.com',
+    rubro: 'Hair & Makeup',
+    desc: 'Estudio hair & makeup con 206 reseñas',
+    slug: 'leticia-carballo',
+    order: 13,
+  },
+  {
+    name: 'Nutrifit Spa',
+    url: 'https://nutrifit-spa.paragu-ai.com',
+    rubro: 'Spa / Nutrición',
+    desc: 'Spa y nutrición integral — 233 reseñas Google',
+    slug: 'nutrifit-spa',
+    order: 14,
+  },
+  {
+    name: 'Lele Ferreira',
+    url: 'https://lele-ferreira.paragu-ai.com',
+    rubro: 'Maquillaje',
+    desc: 'Maquillaje social y de novia',
+    slug: 'lele-ferreira',
+    order: 15,
+  },
+  {
+    name: 'Magnolia Peluquería',
+    url: 'https://magnolia-peluqueria.paragu-ai.com',
+    rubro: 'Peluquería',
+    desc: 'Peluquería integral en barrio Oporto',
+    slug: 'magnolia-peluqueria',
+    order: 16,
+  },
+  // ── SHOWCASE STANDARDS (high-quality reference demos) ──
+  {
+    name: 'Bichos Gym',
+    url: 'https://bichosgym.paragu-ai.com',
+    rubro: 'Gimnasio / Fitness',
+    desc: 'Entrenamiento funcional y crossfit',
+    slug: 'bichosgym',
+    order: 17,
+  },
+  {
+    name: 'Magnolia Flower',
+    url: 'https://magnolia-flower.paragu-ai.com',
+    rubro: 'Florería',
+    desc: 'Flores y decoración de eventos',
+    slug: 'magnolia-flower',
+    order: 18,
   },
   {
     name: 'Mantra Spa',
@@ -16,13 +157,7 @@ export const CLIENTS = [
     rubro: 'Spa & Wellness',
     desc: 'Masajes, tratamientos faciales y bienestar',
     slug: 'mantraspa',
-  },
-  {
-    name: 'Bichos Gym',
-    url: 'https://bichosgym.paragu-ai.com',
-    rubro: 'Gimnasio / Fitness',
-    desc: 'Entrenamiento funcional y crossfit',
-    slug: 'bichosgym',
+    order: 19,
   },
   {
     name: 'DepiFlash',
@@ -30,6 +165,7 @@ export const CLIENTS = [
     rubro: 'Depilación',
     desc: 'Depilación láser IPL a domicilio',
     slug: 'depiflash',
+    order: 20,
   },
   {
     name: 'Nexa Paraguay',
@@ -37,10 +173,52 @@ export const CLIENTS = [
     rubro: 'Reubicación',
     desc: 'Programa de reubicación para europeos (4 idiomas)',
     slug: 'nexa',
+    order: 21,
+  },
+  {
+    name: 'Superspuma',
+    url: 'https://superspuma.paragu-ai.com',
+    rubro: 'Indumentaria',
+    desc: 'Ropa oversize y streetwear paraguayo',
+    slug: 'superspuma',
+    order: 22,
+  },
+  // ── PAYING CLIENTS (custom domains — revenue pipeline) ──
+  {
+    name: 'XXGym',
+    url: 'https://xxgym.com.py',
+    rubro: 'Gimnasio',
+    desc: 'Gimnasio en Fernando de la Mora — leads activos',
+    slug: 'xxgym',
+    order: 23,
+  },
+  {
+    name: 'Portas Barber',
+    url: 'https://portasbarber.com.py',
+    rubro: 'Barbería',
+    desc: 'Barbería premium en Asunción — 162 reseñas Google',
+    slug: 'portas-barber',
+    order: 24,
+  },
+  {
+    name: 'Nde Barba',
+    url: 'https://ndebarba.com.py',
+    rubro: 'Barbería',
+    desc: 'Barbería 4.8 estrellas — leads confirmados',
+    slug: 'nde-barba',
+    order: 25,
+  },
+  {
+    name: 'Shine Nails',
+    url: 'https://shinenails.com.py',
+    rubro: 'Uñas / Nails',
+    desc: 'Nails studio Celeste — 287 reseñas 4.9★ Google',
+    slug: 'shine-nails',
+    order: 26,
   },
 ] as const
 
-// ── Templates for the portfolio strip ──────────────────────────────────
+// ── Templates for the portfolio strip ────────────────────────────────────────
 export const TEMPLATES = [
   {
     id: 'indumentaria',
@@ -92,7 +270,7 @@ export const TEMPLATES = [
   },
 ] as const
 
-// ── Steps ────────────────────────────────────────────────────────────────
+// ── Steps ────────────────────────────────────────────────────────────────────
 export const STEPS = [
   {
     num: '01',
@@ -111,7 +289,7 @@ export const STEPS = [
   },
 ] as const
 
-// ── Features ─────────────────────────────────────────────────────────────
+// ── Features ──────────────────────────────────────────────────────────────────
 export const FEATURES = [
   {
     title: 'Todo incluido',
@@ -139,7 +317,7 @@ export const FEATURES = [
   },
 ] as const
 
-// ── Guarantees ──────────────────────────────────────────────────────────
+// ── Guarantees ────────────────────────────────────────────────────────────────
 export const GUARANTEES = [
   { title: 'Demo antes de pagar', desc: 'Ves tu sitio primero, pagás después.' },
   { title: '30 días de garantía', desc: 'Si no te convence, te devolvemos el setup.' },
@@ -147,7 +325,7 @@ export const GUARANTEES = [
   { title: 'Sin permanencia', desc: 'Cancelás cuando quieras, te llevás tu dominio.' },
 ] as const
 
-// ── Plans ───────────────────────────────────────────────────────────────
+// ── Plans ─────────────────────────────────────────────────────────────────────
 export const PLANS = [
   {
     id: 'prueba',
@@ -242,7 +420,7 @@ export const PLANS = [
   },
 ] as const
 
-// ── FAQs ────────────────────────────────────────────────────────────────
+// ── FAQs ─────────────────────────────────────────────────────────────────────
 export const FAQS = [
   {
     q: '¿Cuánto tiempo tarda en estar listo mi sitio?',
@@ -274,7 +452,7 @@ export const FAQS = [
   },
 ] as const
 
-// ── Testimonials ────────────────────────────────────────────────────────
+// ── Testimonials ──────────────────────────────────────────────────────────────
 export const TESTIMONIALS = [
   {
     name: 'Rocio, DepiFlash',
