@@ -5,6 +5,7 @@ import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { waLink } from '@/lib/utils'
 import { getSortedClients } from '@/lib/getSortedClients'
+import { INITIAL_ORDER } from '@/lib/client-order'
 import ClientImage from '@/components/ClientImage'
 
 
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
 }
 
 export default function ClientesPage() {
+  const orderedClients = [...getSortedClients()].sort((a, b) => {
+    const ao = INITIAL_ORDER[a.slug] ?? a.order
+    const bo = INITIAL_ORDER[b.slug] ?? b.order
+    return ao - bo
+  })
+
   return (
     <>
       <Nav />
@@ -35,7 +42,7 @@ export default function ClientesPage() {
 
           {/* worst-first per memory instructions */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {getSortedClients().map((c) => (
+            {orderedClients.map((c) => (
               <a
                 key={c.slug}
                 href={c.url}

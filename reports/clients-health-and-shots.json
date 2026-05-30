@@ -1,0 +1,314 @@
+[
+  {
+    "order": 1,
+    "slug": "nexa",
+    "url": "https://nexa.paragu-ai.com",
+    "code": "200",
+    "final": "https://nexa.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 2,
+    "slug": "superspuma",
+    "url": "https://superspuma.paragu-ai.com",
+    "code": "200",
+    "final": "https://superspuma.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 3,
+    "slug": "reinadecopas",
+    "url": "https://reinadecopas.paragu-ai.com",
+    "code": "200",
+    "final": "https://reinadecopas.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 4,
+    "slug": "fun4me",
+    "url": "https://fun4me.paragu-ai.com",
+    "code": "200",
+    "final": "https://fun4me.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 5,
+    "slug": "magnolia-peluqueria",
+    "url": "https://magnolia-peluqueria.paragu-ai.com",
+    "code": "200",
+    "final": "https://magnolia-peluqueria.paragu-ai.com/es/",
+    "shot": "updated"
+  },
+  {
+    "order": 7,
+    "slug": "depiflash",
+    "url": "https://depiflash.paragu-ai.com",
+    "code": "200",
+    "final": "https://depiflash.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 8,
+    "slug": "dayah",
+    "url": "https://dayah-litworks.paragu-ai.com",
+    "code": "200",
+    "final": "https://dayah-litworks.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 9,
+    "slug": "ozz",
+    "url": "https://ozmontania.paragu-ai.com",
+    "code": "404",
+    "final": "https://ozmontania.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 10,
+    "slug": "elgatosiames",
+    "url": "https://elgatosiames.com",
+    "code": "200",
+    "final": "https://elgatosiames.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 11,
+    "slug": "maskarada",
+    "url": "https://maskarada.paragu-ai.com",
+    "code": "404",
+    "final": "https://maskarada.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 12,
+    "slug": "villamayor-asociados",
+    "url": "https://villamayor-asociados.paragu-ai.com",
+    "code": "404",
+    "final": "https://villamayor-asociados.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 13,
+    "slug": "treinta-cerveza",
+    "url": "https://treinta-cerveza.paragu-ai.com",
+    "code": "404",
+    "final": "https://treinta-cerveza.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 14,
+    "slug": "polki-squad",
+    "url": "https://polki-squad.paragu-ai.com",
+    "code": "404",
+    "final": "https://polki-squad.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 15,
+    "slug": "nudo",
+    "url": "https://nudo.paragu-ai.com",
+    "code": "404",
+    "final": "https://nudo.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 16,
+    "slug": "jota-ink-tattoo",
+    "url": "https://jota-ink-tattoo.paragu-ai.com",
+    "code": "200",
+    "final": "https://jota-ink-tattoo.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 17,
+    "slug": "golden-visa",
+    "url": "https://goldenvisa.paragu-ai.com",
+    "code": "404",
+    "final": "https://goldenvisa.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 18,
+    "slug": "estudio-contable",
+    "url": "https://contable.paragu-ai.com",
+    "code": "404",
+    "final": "https://contable.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 19,
+    "slug": "granja-cabral",
+    "url": "https://granjacabral.paragu-ai.com",
+    "code": "404",
+    "final": "https://granjacabral.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 20,
+    "slug": "stroopwafel-huis",
+    "url": "https://stroopwafelhuis.paragu-ai.com",
+    "code": "404",
+    "final": "https://stroopwafelhuis.paragu-ai.com/",
+    "shot": "skipped"
+  },
+  {
+    "order": 21,
+    "slug": "magnolia-flower",
+    "url": "https://magnolia-flower.paragu-ai.com",
+    "code": "200",
+    "final": "https://magnolia-flower.paragu-ai.com/es/",
+    "shot": "updated"
+  },
+  {
+    "order": 22,
+    "slug": "hidrobaby-spa",
+    "url": "https://hidrobaby-spa.paragu-ai.com",
+    "code": "200",
+    "final": "https://hidrobaby-spa.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 23,
+    "slug": "cronos-academy",
+    "url": "https://cronos-academy.paragu-ai.com",
+    "code": "200",
+    "final": "https://cronos-academy.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 24,
+    "slug": "clau-bellino",
+    "url": "https://clau-bellino.paragu-ai.com",
+    "code": "200",
+    "final": "https://clau-bellino.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 25,
+    "slug": "barbye-nails",
+    "url": "https://barbye-nails.paragu-ai.com",
+    "code": "200",
+    "final": "https://barbye-nails.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 26,
+    "slug": "woman-cosmeticos",
+    "url": "https://woman-cosmeticos.paragu-ai.com",
+    "code": "200",
+    "final": "https://woman-cosmeticos.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 27,
+    "slug": "scott-tatuajes",
+    "url": "https://scott-tatuajes.paragu-ai.com",
+    "code": "200",
+    "final": "https://scott-tatuajes.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 28,
+    "slug": "avani-belleza",
+    "url": "https://avani-belleza.paragu-ai.com",
+    "code": "200",
+    "final": "https://avani-belleza.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 29,
+    "slug": "viviesteticpy",
+    "url": "https://viviesteticpy.paragu-ai.com",
+    "code": "200",
+    "final": "https://viviesteticpy.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 30,
+    "slug": "estudio-medieval",
+    "url": "https://estudio-medieval.paragu-ai.com",
+    "code": "200",
+    "final": "https://estudio-medieval.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 31,
+    "slug": "arnos-barber-shop",
+    "url": "https://arnos-barber-shop.paragu-ai.com",
+    "code": "200",
+    "final": "https://arnos-barber-shop.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 32,
+    "slug": "leticia-carballo",
+    "url": "https://leticia-carballo.paragu-ai.com",
+    "code": "200",
+    "final": "https://leticia-carballo.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 33,
+    "slug": "nutrifit-spa",
+    "url": "https://nutrifit-spa.paragu-ai.com",
+    "code": "200",
+    "final": "https://nutrifit-spa.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 34,
+    "slug": "lele-ferreira",
+    "url": "https://lele-ferreira.paragu-ai.com",
+    "code": "200",
+    "final": "https://lele-ferreira.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 35,
+    "slug": "bichosgym",
+    "url": "https://bichosgym.paragu-ai.com",
+    "code": "200",
+    "final": "https://bichosgym.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 36,
+    "slug": "mantraspa",
+    "url": "https://mantraspa.paragu-ai.com",
+    "code": "200",
+    "final": "https://mantraspa.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 37,
+    "slug": "xxgym",
+    "url": "https://xxgym.paragu-ai.com",
+    "code": "200",
+    "final": "https://xxgym.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 38,
+    "slug": "portas-barber",
+    "url": "https://portas-barber.paragu-ai.com",
+    "code": "200",
+    "final": "https://portas-barber.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 39,
+    "slug": "nde-barba",
+    "url": "https://nde-barba.paragu-ai.com",
+    "code": "200",
+    "final": "https://nde-barba.paragu-ai.com/",
+    "shot": "updated"
+  },
+  {
+    "order": 40,
+    "slug": "shine-nails",
+    "url": "https://shine-nails.paragu-ai.com",
+    "code": "200",
+    "final": "https://shine-nails.paragu-ai.com/",
+    "shot": "updated"
+  }
+]

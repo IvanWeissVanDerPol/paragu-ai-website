@@ -186,7 +186,7 @@ export const CLIENTS = [
   // ── PAYING CLIENTS (custom domains — revenue pipeline) ──
   {
     name: 'XXGym',
-    url: 'https://xxgym.com.py',
+    url: 'https://xxgym.paragu-ai.com',
     rubro: 'Gimnasio',
     desc: 'Gimnasio en Fernando de la Mora — leads activos',
     slug: 'xxgym',
@@ -194,7 +194,7 @@ export const CLIENTS = [
   },
   {
     name: 'Portas Barber',
-    url: 'https://portasbarber.com.py',
+    url: 'https://portas-barber.paragu-ai.com',
     rubro: 'Barbería',
     desc: 'Barbería premium en Asunción — 162 reseñas Google',
     slug: 'portas-barber',
@@ -202,7 +202,7 @@ export const CLIENTS = [
   },
   {
     name: 'Nde Barba',
-    url: 'https://ndebarba.com.py',
+    url: 'https://nde-barba.paragu-ai.com',
     rubro: 'Barbería',
     desc: 'Barbería 4.8 estrellas — leads confirmados',
     slug: 'nde-barba',
@@ -210,7 +210,7 @@ export const CLIENTS = [
   },
   {
     name: 'Shine Nails',
-    url: 'https://shinenails.com.py',
+    url: 'https://shine-nails.paragu-ai.com',
     rubro: 'Uñas / Nails',
     desc: 'Nails studio Celeste — 287 reseñas 4.9★ Google',
     slug: 'shine-nails',
@@ -219,7 +219,7 @@ export const CLIENTS = [
   // ── EXPANDED PORTFOLIO (additional live sites) ──
   {
     name: 'Dayah LitWorks',
-    url: 'https://dayah.paragu-ai.com',
+    url: 'https://dayah-litworks.paragu-ai.com',
     rubro: 'Diseño / Literatura',
     desc: 'Diseño de portadas, autora Amazon Prime Reading — 400+ portadas',
     slug: 'dayah',
@@ -235,7 +235,7 @@ export const CLIENTS = [
   },
   {
     name: 'El Gato Siamés',
-    url: 'https://elgatosiames.paragu-ai.com',
+    url: 'https://elgatosiames.com',
     rubro: 'Comedia / Stand Up',
     desc: 'Camilo Acosta — stand up comedy, humor ácido y original desde Paraguay',
     slug: 'elgatosiames',
@@ -283,7 +283,7 @@ export const CLIENTS = [
   },
   {
     name: 'Jota Ink Tattoo',
-    url: 'https://jotaink.paragu-ai.com',
+    url: 'https://jota-ink-tattoo.paragu-ai.com',
     rubro: 'Tatuajes',
     desc: 'Tatuajes profesionales en Asunción',
     slug: 'jota-ink-tattoo',
@@ -307,7 +307,7 @@ export const CLIENTS = [
   },
   {
     name: 'Granja Cabral',
-    url: 'https://granjacabral.paragu-ai.com',
+    url: 'https://granjacabral.paragu-ai.com/admin/content',
     rubro: 'Agro / Huevos',
     desc: 'Huevos frescos en Coronel Oviedo — delivery del nido a tu mesa',
     slug: 'granja-cabral',
