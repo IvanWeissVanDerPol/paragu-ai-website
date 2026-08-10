@@ -128,14 +128,14 @@ function Footer() {
             </p>
             <p className="mt-3 text-sm leading-relaxed text-gray-400">
               Creamos sitios web profesionales para negocios paraguayos. Todo
-              incluido: diseño, dominio .com.py, SEO y WhatsApp.
+              incluido: diseño, dominio .com.py, SEO y Messaging.
             </p>
             <a
               href={waLink('Hola, quiero saber más de ParaguAI.')}
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20"
             >
               <MessageCircle size={15} />
-              Escribir por WhatsApp
+              Escribir por Messaging
             </a>
           </div>
 
@@ -165,7 +165,7 @@ function Footer() {
               Contacto
             </p>
             <ul className="space-y-2.5 text-sm text-gray-400">
-              <li>WhatsApp: +595 981 324 569</li>
+              <li>Messaging: +595 981 324 569</li>
               <li>
                 Email:{' '}
                 <a
@@ -307,7 +307,7 @@ function Hero() {
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl">
             Creamos sitios web profesionales para negocios paraguayos. Todo
-            incluido: diseño, dominio .com.py, SEO, WhatsApp y soporte.{' '}
+            incluido: diseño, dominio .com.py, SEO, Messaging y soporte.{' '}
             <strong className="text-gray-900">Demo gratis, sin compromiso.</strong>
           </p>
 
@@ -427,7 +427,7 @@ function FeaturesSection() {
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50">
                 {f.title === 'Todo incluido' ? (
                   <Layers size={18} className="text-primary-600" />
-                ) : f.title === 'WhatsApp directo' ? (
+                ) : f.title === 'Messaging directo' ? (
                   <MessageCircle size={18} className="text-primary-600" />
                 ) : f.title === 'Dominio propio' ? (
                   <Globe size={18} className="text-primary-600" />
@@ -624,14 +624,14 @@ function FAQSection() {
         <div className="mt-10 text-center rounded-2xl bg-gradient-to-br from-primary-600 to-brand-600 p-10 text-white">
           <h3 className="text-2xl font-bold">¿Tenés dudas?</h3>
           <p className="mt-2 text-white/80">
-            Escribinos por WhatsApp y te respondemos en minutos.
+            Escribinos por Messaging y te respondemos en minutos.
           </p>
           <a
             href={waLink('Hola, tengo una pregunta sobre ParaguAI.')}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-primary-700 transition-all hover:-translate-y-0.5 hover:shadow-xl"
           >
             <MessageCircle size={18} />
-            Escribir por WhatsApp
+            Escribir por Messaging
           </a>
         </div>
       </div>

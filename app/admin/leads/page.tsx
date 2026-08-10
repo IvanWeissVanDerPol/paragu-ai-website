@@ -10,7 +10,7 @@ const STATUS_COLORS: Record<LeadStatus, string> = {
 }
 
 const SOURCE_LABELS: Record<string, string> = {
-  google_maps: '📍 Google Maps', whatsapp: '💬 WhatsApp', referral: '👥 Referral',
+  google_maps: '📍 Google Maps', messaging: '💬 Messaging', referral: '👥 Referral',
   cold_outreach: '📧 Cold Outreach', event: '🎪 Event', infonegocios: '📰 Infonegocios', viralist: '🔥 Viralist'
 }
 
@@ -267,7 +267,7 @@ export default function LeadsPage() {
             <div style={{ marginBottom: 16 }}>
               <div style={{ fontSize: 12, color: '#666', marginBottom: 8 }}>💬 CONTACTS</div>
               <div style={{ fontSize: 13, color: '#fff' }}>
-                WhatsApp: <a href={`https://${selectedLead.whatsapp}`} style={{ color: '#3b82f6' }}>{selectedLead.whatsapp}</a>
+                Messaging: <a href={`https://${selectedLead.messaging}`} style={{ color: '#3b82f6' }}>{selectedLead.messaging}</a>
                 <br />Phone: {selectedLead.phone}
               </div>
             </div>
@@ -322,7 +322,7 @@ export default function LeadsPage() {
 
             <div style={{ display: 'flex', gap: 12 }}>
               <a
-                href={`https://${selectedLead.whatsapp}`}
+                href={`https://${selectedLead.messaging}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -330,7 +330,7 @@ export default function LeadsPage() {
                   color: '#fff', fontSize: 14, fontWeight: 600, cursor: 'pointer', textDecoration: 'none'
                 }}
               >
-                💬 WhatsApp
+                💬 Messaging
               </a>
               <button
                 style={{

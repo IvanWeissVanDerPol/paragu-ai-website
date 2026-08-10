@@ -25,7 +25,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_WHATSAPP: ${{ secrets.NEXT_PUBLIC_WHATSAPP }}
+          NEXT_PUBLIC_MESSAGING: ${{ secrets.NEXT_PUBLIC_MESSAGING }}
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
       - name: Deploy to Cloudflare Pages

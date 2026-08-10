@@ -23,7 +23,7 @@ export default function MetodoPage() {
               Solo 3 pasos, sin complicaciones
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Nos das la info de tu negocio por WhatsApp y en 48h tenés el
+              Nos das la info de tu negocio por Messaging y en 48h tenés el
               sitio online. Sin que toques código.
             </p>
           </div>
@@ -50,14 +50,14 @@ export default function MetodoPage() {
           <div className="mt-16 text-center rounded-3xl bg-gradient-to-br from-primary-600 to-brand-600 p-10 text-white">
             <h2 className="text-2xl font-bold">Empezá hoy</h2>
             <p className="mt-2 text-white/80">
-              Escribinos por WhatsApp y en 24h tenés tu demo listos.
+              Escribinos por Messaging y en 24h tenés tu demo listos.
             </p>
             <a
               href={waLink('Hola, quiero empezar con ParaguAI. ¿Cómo funciona?')}
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-primary-700 transition-all hover:-translate-y-0.5 hover:shadow-xl"
             >
               <MessageCircle size={18} />
-              Escribir por WhatsApp
+              Escribir por Messaging
               <ArrowRight size={16} />
             </a>
           </div>

@@ -80,7 +80,7 @@ export default function ClientesPage() {
               El próximo puede ser el tuyo
             </h2>
             <p className="mt-3 max-w-xl mx-auto text-white/80">
-              Mandanos tu negocio por WhatsApp y en 24h tenés una demo gratis,
+              Mandanos tu negocio por Messaging y en 24h tenés una demo gratis,
               sin compromiso.
             </p>
             <a
