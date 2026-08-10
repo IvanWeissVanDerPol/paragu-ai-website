@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: '%s · ParaguAI',
   },
   description:
-    'Sitios web profesionales para negocios paraguayos. Diseño, dominio .com.py, SEO, WhatsApp y soporte incluido. Demo gratis.',
+    'Sitios web profesionales para negocios paraguayos. Diseño, dominio .com.py, SEO, Messaging y soporte incluido. Demo gratis.',
   keywords: [
     'sitio web Paraguay',
     'web para negocios',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'gimnasio web Paraguay',
     'crear web',
     'dominio .com.py',
-    'WhatsApp бизнес',
+    'Messaging бизнес',
     'SEO Paraguay',
   ],
   authors: [{ name: 'ParaguAI Builder' }],

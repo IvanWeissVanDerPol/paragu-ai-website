@@ -7,7 +7,7 @@ const config: NextConfig = {
   trailingSlash: true,
   basePath: '',
   env: {
-    NEXT_PUBLIC_WHATSAPP: process.env.NEXT_PUBLIC_WHATSAPP,
+    NEXT_PUBLIC_MESSAGING: process.env.NEXT_PUBLIC_MESSAGING,
   },
 }
 

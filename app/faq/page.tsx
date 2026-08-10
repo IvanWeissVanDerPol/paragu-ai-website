@@ -42,13 +42,13 @@ export default function FAQPage() {
           <div className="mt-12 text-center rounded-2xl bg-gradient-to-br from-primary-600 to-brand-600 p-10 text-white">
             <h2 className="text-2xl font-bold">¿Tenés más dudas?</h2>
             <p className="mt-2 text-white/80">
-              Escribinos por WhatsApp y te respondemos al toque.
+              Escribinos por Messaging y te respondemos al toque.
             </p>
             <a
               href={waLink('Hola, tengo una pregunta sobre ParaguAI.')}
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-primary-700"
             >
-              Escribir por WhatsApp
+              Escribir por Messaging
             </a>
           </div>
         </div>

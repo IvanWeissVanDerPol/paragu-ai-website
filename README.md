@@ -24,7 +24,7 @@ npm run build
 |--------|-------|
 | `CLOUDFLARE_API_TOKEN` | Token de Cloudflare con permiso Pages Edit |
 | `CLOUDFLARE_ACCOUNT_ID` | Account ID de Cloudflare |
-| `NEXT_PUBLIC_WHATSAPP` | `595981324569` |
+| `NEXT_PUBLIC_MESSAGING` | `595981324569` |
 
 ## Estructura
 
@@ -44,7 +44,7 @@ components/
 
 lib/
   data.ts           → Todo el contenido real (planes, clientes, features, FAQ)
-  utils.ts          → waLink(), constante WHATSAPP
+  utils.ts          → waLink(), constante MESSAGING
 
 public/screenshots/ → SVG screenshots de los 13 sitios reales
 public/favicon.svg → Favicon SVG

@@ -21,7 +21,7 @@ const TEAM = [
   {
     name: 'Kyrian (Kiki)',
     role: 'Sales & Marketing Lead',
-    desc: 'Maneja cada nuevo negocio que entra por WhatsApp. Entiende qué necesitan las PYMEs paraguayas y cómo comunicarlo.',
+    desc: 'Maneja cada nuevo negocio que entra por Messaging. Entiende qué necesitan las PYMEs paraguayas y cómo comunicarlo.',
   },
   {
     name: 'Erebus',
@@ -139,9 +139,9 @@ export default function SobreNosotrosPage() {
           </h2>
           <div className="mt-8 space-y-6">
             {[
-              { n: '01', title: 'Nos escribís por WhatsApp', desc: 'Nombre del negocio, servicios, precios y fotos. Sin formularios.' },
+              { n: '01', title: 'Nos escribís por Messaging', desc: 'Nombre del negocio, servicios, precios y fotos. Sin formularios.' },
               { n: '02', title: 'En 48h tenés tu demo lista', desc: 'Link de preview. Lo revisás, pedís ajustes, confirmás que está todo bien.' },
-              { n: '03', title: 'Publicamos y mantenemos', desc: 'Dominio .com.py, SSL, SEO. Cambios mensuales ilimitados por WhatsApp.' },
+              { n: '03', title: 'Publicamos y mantenemos', desc: 'Dominio .com.py, SSL, SEO. Cambios mensuales ilimitados por Messaging.' },
             ].map(({ n, title, desc }) => (
               <div key={n} className="flex items-start gap-4">
                 <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-600 text-xs font-bold text-white">
@@ -161,14 +161,14 @@ export default function SobreNosotrosPage() {
           <div className="rounded-3xl bg-gradient-to-br from-primary-600 to-brand-600 p-10 text-white">
             <h2 className="text-2xl font-bold md:text-3xl">¿Hablamos de tu proyecto?</h2>
             <p className="mt-3 max-w-xl mx-auto text-white/80">
-              Mandanos tu negocio por WhatsApp y en 24h tenés una demo gratis, sin compromiso.
+              Mandanos tu negocio por Messaging y en 24h tenés una demo gratis, sin compromiso.
             </p>
             <a
               href={waLink('Hola, quiero saber más de ParaguAI para mi negocio.')}
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-primary-700 transition-all hover:-translate-y-0.5 hover:shadow-xl"
             >
               <MessageCircle size={18} />
-              Escribir por WhatsApp
+              Escribir por Messaging
             </a>
           </div>
           <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-400">

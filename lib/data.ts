@@ -379,7 +379,7 @@ export const TEMPLATES = [
 export const STEPS = [
   {
     num: '01',
-    title: 'Contanos por WhatsApp',
+    title: 'Contanos por Messaging',
     desc: 'Nos mandás el nombre del negocio, servicios, precios y fotos. Sin formularios complicados.',
   },
   {
@@ -390,7 +390,7 @@ export const STEPS = [
   {
     num: '03',
     title: 'Lanzamos y mantenemos',
-    desc: 'Publicamos en tu dominio .com.py con SSL, SEO y analytics. Cambios mensuales incluidos por WhatsApp.',
+    desc: 'Publicamos en tu dominio .com.py con SSL, SEO y analytics. Cambios mensuales incluidos por Messaging.',
   },
 ] as const
 
@@ -401,8 +401,8 @@ export const FEATURES = [
     desc: 'Diseño, textos, fotos, dominio, hosting, SEO y soporte. Vos no tocás nada.',
   },
   {
-    title: 'WhatsApp directo',
-    desc: 'Botón flotante que lleva directo a tu WhatsApp Business. Tus clientes te escriben con un clic.',
+    title: 'Messaging directo',
+    desc: 'Botón flotante que lleva directo a tu Messaging Business. Tus clientes te escriben con un clic.',
   },
   {
     title: 'Dominio propio',
@@ -443,8 +443,8 @@ export const PLANS = [
       'Probá todo lo que ofrecemos antes de pagar nada. Sin tarjeta, sin compromiso.',
     features: [
       { text: 'Tu sitio en subdominio .paragu-ai.com', included: true },
-      { text: 'WhatsApp + Google Maps + SSL', included: true },
-      { text: 'Soporte por WhatsApp', included: true },
+      { text: 'Messaging + Google Maps + SSL', included: true },
+      { text: 'Soporte por Messaging', included: true },
       { text: 'Demo lista en 48h', included: true },
       { text: 'Después: seguís online (marca ParaguAI) o pasás a plan pago', included: true },
       { text: 'Dominio propio (.com.py)', included: false },
@@ -468,10 +468,10 @@ export const PLANS = [
       { text: 'Hasta 5 páginas', included: true },
       { text: 'Dominio propio .com.py incluido 1 año', included: true },
       { text: 'Hasta 15 fotos optimizadas', included: true },
-      { text: 'Formulario + WhatsApp Business', included: true },
+      { text: 'Formulario + Messaging Business', included: true },
       { text: 'SEO básico + Google Maps', included: true },
       { text: '2 cambios de contenido al mes', included: true },
-      { text: 'Soporte dedicado por WhatsApp', included: true },
+      { text: 'Soporte dedicado por Messaging', included: true },
     ],
     cta: 'Comenzar Presencia',
     waMsg:
@@ -533,7 +533,7 @@ export const FAQS = [
   },
   {
     q: '¿Necesito conocimientos técnicos?',
-    a: 'Ninguno. Nosotros hacemos todo: diseño, textos, fotos, SEO, dominio y publicación. Vos nos mandás la info de tu negocio por WhatsApp y recibís el sitio listo.',
+    a: 'Ninguno. Nosotros hacemos todo: diseño, textos, fotos, SEO, dominio y publicación. Vos nos mandás la info de tu negocio por Messaging y recibís el sitio listo.',
   },
   {
     q: '¿Puedo probar antes de pagar?',

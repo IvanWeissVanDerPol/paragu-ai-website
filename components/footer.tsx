@@ -16,14 +16,14 @@ export function Footer() {
             </p>
             <p className="mt-3 text-sm leading-relaxed text-gray-400">
               Creamos sitios web profesionales para negocios paraguayos. Todo
-              incluido: diseño, dominio .com.py, SEO y WhatsApp.
+              incluido: diseño, dominio .com.py, SEO y Messaging.
             </p>
             <a
               href={waLink('Hola, quiero saber más de ParaguAI.')}
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20"
             >
               <MessageCircle size={15} />
-              Escribir por WhatsApp
+              Escribir por Messaging
             </a>
           </div>
 
@@ -52,7 +52,7 @@ export function Footer() {
               Contacto
             </p>
             <ul className="space-y-2.5 text-sm text-gray-400">
-              <li>WhatsApp: +595 981 324 569</li>
+              <li>Messaging: +595 981 324 569</li>
               <li>Email: hello@paragu-ai.com</li>
               <li>Asunción, Paraguay</li>
             </ul>

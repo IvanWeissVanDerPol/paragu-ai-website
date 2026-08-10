@@ -80,13 +80,13 @@ export default function PreciosPage() {
 
           <div className="mt-16 text-center">
             <p className="text-gray-500">
-              ¿Dudas sobre qué plan elegir? Escribinos por WhatsApp.
+              ¿Dudas sobre qué plan elegir? Escribinos por Messaging.
             </p>
             <a
               href={waLink('Hola, tengo dudas sobre qué plan elegir para mi negocio.')}
               className="btn-primary mt-4"
             >
-              Consultar por WhatsApp
+              Consultar por Messaging
             </a>
           </div>
         </div>
