@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { MobileWhatsAppBar } from '@/components/MobileWhatsAppBar'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://paragu-ai.com'),
@@ -71,7 +72,10 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <MobileWhatsAppBar />
+      </body>
     </html>
   )
 }

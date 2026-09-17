@@ -1,0 +1,307 @@
+{
+  "categories": [
+    "Gimnasio y Fitness",
+    "Belleza y Estética",
+    "Barbería",
+    "Spa y Bienestar",
+    "Salud y Bienestar",
+    "Gastronomía",
+    "Eventos y Espacios",
+    "Servicios Profesionales",
+    "Cultura y Espectáculos",
+    "Otros"
+  ],
+  "accents": {
+    "Belleza y Estética": "rose",
+    "Barbería": "amber",
+    "Gimnasio y Fitness": "emerald",
+    "Spa y Bienestar": "teal",
+    "Salud y Bienestar": "sky",
+    "Gastronomía": "orange",
+    "Eventos y Espacios": "violet",
+    "Servicios Profesionales": "indigo",
+    "Cultura y Espectáculos": "fuchsia",
+    "Otros": "gray"
+  },
+  "clients": [
+    {
+      "slug": "barbye-nails",
+      "name": "Barbye Nails",
+      "desc": "Nail salon",
+      "url": "https://barbye-nails.paragu-ai.com",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 1
+    },
+    {
+      "slug": "clau-bellino",
+      "name": "Clau Bellino",
+      "desc": "Beauty / cosmetics",
+      "url": "https://clau-bellino.paragu-ai.com",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 2
+    },
+    {
+      "slug": "depiflash",
+      "name": "DepiFlash",
+      "desc": "Beauty services — depilation",
+      "url": "https://depiflash.paragu-ai.com",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 3
+    },
+    {
+      "slug": "lele-ferreira",
+      "name": "Lele Ferreira",
+      "desc": "Beauty / cosmetics",
+      "url": "https://lele-ferreira.paragu-ai.com",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 4
+    },
+    {
+      "slug": "leticia-carballo",
+      "name": "Leticia Carballo",
+      "desc": "Beauty / cosmetics",
+      "url": "https://leticia-carballo.paragu-ai.com",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 5
+    },
+    {
+      "slug": "magnolia-peluqueria",
+      "name": "Magnolia Peluquería",
+      "desc": "Hair salon",
+      "url": "https://magnolia-peluqueria.paragu-ai.com",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 6
+    },
+    {
+      "slug": "shine-nails",
+      "name": "Shine Nails",
+      "desc": "Nail salon",
+      "url": "https://shine-nails.paragu-ai.com",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 7
+    },
+    {
+      "slug": "woman-cosmeticos",
+      "name": "Woman Cosméticos",
+      "desc": "Cosmetics retail",
+      "url": "https://woman-cosmeticos.paragu-ai.com",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 8
+    },
+    {
+      "slug": "arnos-barber-shop",
+      "name": "Arno's Barber Shop",
+      "desc": "Barbershop — men's grooming",
+      "url": "https://arnos-barber-shop.paragu-ai.com",
+      "category": "Barbería",
+      "accent": "amber",
+      "order": 1
+    },
+    {
+      "slug": "barbershop-peluqueria",
+      "name": "Barbershop Peluquería",
+      "desc": "Barbershop",
+      "url": "https://barbershop-peluqueria.paragu-ai.com",
+      "category": "Barbería",
+      "accent": "amber",
+      "order": 2
+    },
+    {
+      "slug": "nde-barba",
+      "name": "Nde Barba",
+      "desc": "Barbershop",
+      "url": "https://nde-barba.paragu-ai.com",
+      "category": "Barbería",
+      "accent": "amber",
+      "order": 3
+    },
+    {
+      "slug": "peluqueria-barbershop",
+      "name": "Peluquería Barbershop",
+      "desc": "Barbershop",
+      "url": "https://peluqueria-barbershop.paragu-ai.com",
+      "category": "Barbería",
+      "accent": "amber",
+      "order": 4
+    },
+    {
+      "slug": "portas-barber",
+      "name": "Portas Barber",
+      "desc": "Barbershop",
+      "url": "https://portas-barber.paragu-ai.com",
+      "category": "Barbería",
+      "accent": "amber",
+      "order": 5
+    },
+    {
+      "slug": "cuidadoamiga",
+      "name": "Cuidado Amiga",
+      "desc": "Wellness / companion care",
+      "url": "https://cuidadoamiga.paragu-ai.com",
+      "category": "Spa y Bienestar",
+      "accent": "teal",
+      "order": 1
+    },
+    {
+      "slug": "hidrobaby-spa",
+      "name": "Hidrobaby Spa",
+      "desc": "Baby spa / hydrotherapy",
+      "url": "https://hidrobaby-spa.paragu-ai.com",
+      "category": "Spa y Bienestar",
+      "accent": "teal",
+      "order": 2
+    },
+    {
+      "slug": "nutrifit-spa",
+      "name": "Nutrifit Spa",
+      "desc": "Wellness / nutrition",
+      "url": "https://nutrifit-spa.paragu-ai.com",
+      "category": "Spa y Bienestar",
+      "accent": "teal",
+      "order": 3
+    },
+    {
+      "slug": "salud-abierta",
+      "name": "Salud Abierta",
+      "desc": "Open data — healthcare transparency",
+      "url": "https://salud-abierta.paragu-ai.com",
+      "category": "Spa y Bienestar",
+      "accent": "teal",
+      "order": 4
+    },
+    {
+      "slug": "de-abasto-a-casa",
+      "name": "De Abasto a Casa",
+      "desc": "Food delivery / market",
+      "url": "https://de-abasto-a-casa.paragu-ai.com",
+      "category": "Gastronomía",
+      "accent": "orange",
+      "order": 1
+    },
+    {
+      "slug": "meal-prep",
+      "name": "Meal Prep",
+      "desc": "Meal prep service",
+      "url": "https://meal-prep.paragu-ai.com",
+      "category": "Gastronomía",
+      "accent": "orange",
+      "order": 2
+    },
+    {
+      "slug": "stroopwafel-huis",
+      "name": "Stroopwafel Huis",
+      "desc": "Dutch stroopwafels",
+      "url": "https://stroopwafel-huis.paragu-ai.com",
+      "category": "Gastronomía",
+      "accent": "orange",
+      "order": 3
+    },
+    {
+      "slug": "trentina-cerveza",
+      "name": "Trentina Cerveza",
+      "desc": "Craft brewery",
+      "url": "https://trentina-cerveza.paragu-ai.com",
+      "category": "Gastronomía",
+      "accent": "orange",
+      "order": 4
+    },
+    {
+      "slug": "tsuki-restaurante",
+      "name": "Tsuki Restaurante",
+      "desc": "Japanese restaurant",
+      "url": "https://tsuki-restaurante.paragu-ai.com",
+      "category": "Gastronomía",
+      "accent": "orange",
+      "order": 5
+    },
+    {
+      "slug": "fun4me-store",
+      "name": "Fun4Me Store",
+      "desc": "Event store",
+      "url": "https://fun4me-store.paragu-ai.com",
+      "category": "Eventos y Espacios",
+      "accent": "violet",
+      "order": 1
+    },
+    {
+      "slug": "maskarada",
+      "name": "Maskarada",
+      "desc": "Event venue",
+      "url": "https://maskarada.paragu-ai.com",
+      "category": "Eventos y Espacios",
+      "accent": "violet",
+      "order": 2
+    },
+    {
+      "slug": "rockabar",
+      "name": "Rock a Bar",
+      "desc": "Bar / events venue",
+      "url": "https://rockabar.paragu-ai.com",
+      "category": "Eventos y Espacios",
+      "accent": "violet",
+      "order": 3
+    },
+    {
+      "slug": "camilo-acosta",
+      "name": "Camilo Acosta",
+      "desc": "Tattoo artist",
+      "url": "https://camilo-acosta.paragu-ai.com",
+      "category": "Cultura y Espectáculos",
+      "accent": "fuchsia",
+      "order": 1
+    },
+    {
+      "slug": "avani-belleza",
+      "name": "Avani Belleza",
+      "desc": "Beauty salon",
+      "url": "https://avani-belleza.paragu-ai.com",
+      "category": "Otros",
+      "accent": "gray",
+      "order": 1
+    },
+    {
+      "slug": "estudio-medieval",
+      "name": "Estudio Medieval",
+      "desc": "Tattoo studio",
+      "url": "https://estudio-medieval.paragu-ai.com",
+      "category": "Otros",
+      "accent": "gray",
+      "order": 2
+    },
+    {
+      "slug": "jota-ink-tattoo",
+      "name": "Jota Ink Tattoo",
+      "desc": "Tattoo studio",
+      "url": "https://jota-ink-tattoo.paragu-ai.com",
+      "category": "Otros",
+      "accent": "gray",
+      "order": 3
+    },
+    {
+      "slug": "scott-tatuajes",
+      "name": "Scott Tatuajes",
+      "desc": "Tattoo studio",
+      "url": "https://scott-tatuajes.paragu-ai.com",
+      "category": "Otros",
+      "accent": "gray",
+      "order": 4
+    },
+    {
+      "slug": "viviesteticpy",
+      "name": "Vivi Estetic PY",
+      "desc": "Aesthetics clinic",
+      "url": "https://viviesteticpy.paragu-ai.com",
+      "category": "Otros",
+      "accent": "gray",
+      "order": 5
+    }
+  ]
+}

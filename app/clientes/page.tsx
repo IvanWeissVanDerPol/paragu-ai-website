@@ -1,97 +1,161 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { ExternalLink, ArrowRight } from 'lucide-react'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
+import { CategorySection } from '@/components/CategorySection'
+import { ClientCard, type ClientCardData } from '@/components/ClientCard'
 import { waLink } from '@/lib/utils'
-import { getSortedClients } from '@/lib/getSortedClients'
-import { INITIAL_ORDER } from '@/lib/client-order'
-import ClientImage from '@/components/ClientImage'
-
+import {
+  getAllClients, getClientsByCategory,
+  CATEGORY_META, CATEGORY_ORDER, RUBROS,
+  SLUGS_WITH_SCREENSHOT,
+} from '@/lib/clients'
 
 export const metadata: Metadata = {
-  title: 'Sitios Reales · ParaguAI',
+  title: '34 sitios en vivo · ParaguAI',
   description:
-    'Negocios paraguayos reales con su sitio web en ParaguAI. Peluquerías, gimnasios, spas, tatuajes, cervecerías y más.',
+    'Sitios reales que ya venden online con ParaguAI. Peluquerías, barberías, gimnasios, spas, gastronomía, eventos y más — todos construidos y mantenidos por nosotros.',
   alternates: { canonical: '/clientes' },
 }
 
+function toCardData(c: ReturnType<typeof getAllClients>[number]): ClientCardData {
+  return {
+    name: c.name,
+    slug: c.slug,
+    url: c.url,
+    rubro: RUBROS[c.slug] ?? c.category,
+    desc: c.desc,
+    category: c.category,
+    accent: c.accent,
+    hasScreenshot: SLUGS_WITH_SCREENSHOT.has(c.slug),
+  }
+}
+
 export default function ClientesPage() {
-  const orderedClients = [...getSortedClients()].sort((a, b) => {
-    const ao = INITIAL_ORDER[a.slug] ?? a.order
-    const bo = INITIAL_ORDER[b.slug] ?? b.order
-    return ao - bo
-  })
+  const grouped = getClientsByCategory()
+  const total = getAllClients().length
+  const featured = getAllClients()
+    .filter(c => SLUGS_WITH_SCREENSHOT.has(c.slug))
+    .slice(0, 6)
+    .map(toCardData)
 
   return (
     <>
       <Nav />
-      <main className="pt-36 pb-20">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="mb-12 text-center">
-            <span className="section-label">Portafolio</span>
-            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
-              Sitios Reales
+      <main className="pt-28 pb-24">
+        {/* Hero */}
+        <section className="mx-auto mb-10 max-w-6xl px-5 md:mb-14">
+          <div className="rounded-3xl bg-gray-950 px-6 py-12 text-white md:px-12 md:py-16">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
+              Portafolio público
+            </span>
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight md:text-6xl">
+              {total} sitios en vivo.
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              No son plantillas vacías. Son negocios paraguayos que ya venden
-              online con ParaguAI. Cada uno tiene Leads, reservas o pedidos
-              reales.
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
+              Cada uno es un negocio paraguayo real — peluquería, barbería, gimnasio,
+              spa, restaurante — con su dominio propio, su SEO y su WhatsApp. No son
+              plantillas vacías.
             </p>
-          </div>
-
-          {/* worst-first per memory instructions */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {orderedClients.map((c) => (
+            <div className="mt-7 flex flex-wrap gap-3">
               <a
-                key={c.slug}
-                href={c.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-2xl border border-gray-200 bg-white overflow-hidden transition-all hover:-translate-y-1 hover:shadow-xl"
+                href={waLink('Hola, vi el portafolio de ParaguAI y quiero una demo para mi negocio.')}
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition-transform hover:-translate-y-0.5"
               >
-                <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
-                  <ClientImage
-                    src={`/screenshots/${c.slug}.jpg`}
-                    alt={`${c.name} — ${c.rubro}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <span className="mb-2 inline-block rounded-full bg-gray-50 px-2.5 py-1 text-xs font-semibold text-gray-500">
-                    {c.rubro}
-                  </span>
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                    {c.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-600">{c.desc}</p>
-                  <div className="mt-3 flex items-center gap-1 text-sm font-medium text-primary-600">
-                    Ver sitio
-                    <ExternalLink size={14} />
-                  </div>
-                </div>
+                Quiero una demo gratis
               </a>
-            ))}
+              <a
+                href="#belleza"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                Ver por categoría
+              </a>
+            </div>
           </div>
+        </section>
 
-          {/* CTA */}
-          <div className="mt-16 text-center rounded-3xl bg-gradient-to-br from-primary-600 to-brand-600 p-10 text-white">
-            <h2 className="text-2xl font-bold md:text-3xl">
-              El próximo puede ser el tuyo
-            </h2>
-            <p className="mt-3 max-w-xl mx-auto text-white/80">
-              Mandanos tu negocio por WhatsApp y en 24h tenés una demo gratis,
-              sin compromiso.
-            </p>
-            <a
-              href={waLink('Hola, quiero una demo gratis como los sitios del portafolio.')}
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-primary-700 transition-all hover:-translate-y-0.5 hover:shadow-xl"
-            >
-              Quiero mi demo gratis
-              <ArrowRight size={18} />
-            </a>
-          </div>
+        {/* Sticky category nav (in-page) */}
+        <nav className="sticky top-16 z-30 -mx-5 mb-10 border-y border-gray-200 bg-white/85 px-5 backdrop-blur-md md:-mx-0 md:rounded-2xl md:border md:px-4">
+          <ul className="flex gap-1.5 overflow-x-auto py-2.5 text-sm font-medium text-gray-700 md:gap-2 md:py-3">
+            {CATEGORY_ORDER.filter((c) => grouped[c]?.length).map((cat) => {
+              const meta = CATEGORY_META[cat]
+              const Icon = meta?.icon
+              return (
+                <li key={cat}>
+                  <a
+                    href={`#${cat.toLowerCase().replace(/ /g, '-').replace('y-', '-')}`}
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1.5 text-xs transition-colors hover:bg-gray-200"
+                  >
+                    {Icon && <Icon size={12} />}
+                    {meta?.label ?? cat}
+                    <span className="ml-1 rounded-full bg-white px-1.5 text-[10px] font-bold text-gray-600">
+                      {grouped[cat].length}
+                    </span>
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
+
+        {/* Category sections */}
+        <div className="mx-auto max-w-6xl space-y-10 px-5 md:space-y-14">
+          {CATEGORY_ORDER.filter((c) => grouped[c]?.length).map((cat) => {
+            const meta = CATEGORY_META[cat]
+            const clients = grouped[cat].map(toCardData)
+            const slug = cat.toLowerCase().replace(/ /g, '-').replace('y-', '-')
+            return (
+              <CategorySection
+                key={cat}
+                id={slug}
+                title={meta?.label ?? cat}
+                subtitle={meta?.subtitle}
+                icon={meta?.icon}
+                count={clients.length}
+                accent={clients[0]?.accent ?? 'gray'}
+                clients={clients}
+              />
+            )
+          })}
         </div>
+
+        {/* Featured row — full-bleed dark */}
+        <section className="mt-16 bg-gray-950 px-5 py-14 md:mt-20 md:py-20">
+          <div className="mx-auto max-w-6xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
+              Destacados
+            </span>
+            <h2 className="mt-3 text-2xl font-extrabold text-white md:text-3xl">
+              Los que más Leads generan
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-white/60 md:text-base">
+              Una muestra — clic en cada tarjeta abre el sitio real.
+            </p>
+            <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {featured.map((c) => (
+                <div key={c.slug} className="rounded-2xl ring-1 ring-white/10">
+                  <ClientCard c={c} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="mx-auto mt-16 max-w-3xl px-5 text-center md:mt-20">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+            El próximo sitio puede ser el tuyo.
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-base text-gray-600">
+            Mandanos tu negocio por WhatsApp. En 48h tenés una demo gratis, sin
+            compromiso.
+          </p>
+          <a
+            href={waLink('Hola, quiero una demo gratis como los sitios del portafolio.')}
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-gray-950 px-8 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+          >
+            Empezar por WhatsApp
+          </a>
+        </section>
       </main>
       <Footer />
     </>
