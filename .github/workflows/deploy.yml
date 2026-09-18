@@ -37,12 +37,12 @@ jobs:
         # some CF regions, failing CI deploys. The versions flow doesn't
         # probe: it uploads a new version then promotes it.
         run: |
-          set -e
-          VERSION_OUTPUT=$(npx opennextjs-cloudflare upload 2>&1)
-          echo "$VERSION_OUTPUT"
-          VERSION_ID=$(echo "$VERSION_OUTPUT" | grep -oE 'Worker Version ID: [0-9a-f-]+' | awk '{print $NF}')
+          set -euxo pipefail
+          npx opennextjs-cloudflare upload > /tmp/upload.log 2>&1 || (cat /tmp/upload.log && exit 1)
+          cat /tmp/upload.log
+          VERSION_ID=$(grep -oE 'Worker Version ID: [0-9a-f-]+' /tmp/upload.log | awk '{print $NF}')
           if [ -z "$VERSION_ID" ]; then
-            echo "ERROR: could not parse Worker Version ID from upload output"
+            echo "ERROR: could not parse Worker Version ID from upload output" >&2
             exit 1
           fi
           echo "Promoting version $VERSION_ID to 100%"
