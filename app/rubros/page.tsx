@@ -70,7 +70,7 @@ export default function RubrosPage() {
               {CATEGORY_PROOF.map((c) => (
                 <li key={c.cat}>
                   <Link
-                    href={`/clientes#${c.cat.toLowerCase().replace(/ /g, '-').replace('y-', '-')}`}
+                    href="/"
                     className={`group flex h-full items-start justify-between rounded-2xl border-2 bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg ${accentBorder[c.accent]}`}
                   >
                     <div>

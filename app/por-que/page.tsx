@@ -68,7 +68,7 @@ export default function PorQuePage() {
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link
-                  href="/clientes"
+                  href="/"
                   className="inline-flex items-center gap-2 rounded-full bg-gray-950 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                 >
                   Ver sitios reales

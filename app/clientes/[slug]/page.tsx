@@ -58,8 +58,8 @@ export default async function ClientePage({ params }: Props) {
         {/* Hero — full-bleed dark with hero shot */}
         <section className="bg-gray-950 pt-28 pb-10 text-white md:pt-36">
           <div className="mx-auto max-w-6xl px-5">
-            <Link href="/clientes" className="inline-flex items-center gap-1.5 text-sm text-white/60 transition-colors hover:text-white">
-              <ArrowLeft size={14} /> Volver a los sitios
+            <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-white/60 transition-colors hover:text-white">
+              <ArrowLeft size={14} /> Volver al portafolio
             </Link>
             <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div>

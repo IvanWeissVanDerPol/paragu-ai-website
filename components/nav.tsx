@@ -6,8 +6,7 @@ import { MessageCircle, Menu, X } from 'lucide-react'
 import { waLink } from '@/lib/utils'
 
 const links = [
-  { href: '/', label: 'Inicio' },
-  { href: '/clientes', label: 'Clientes' },
+  { href: '/', label: 'Portafolio' },
   { href: '/precios', label: 'Precios' },
   { href: '/metodo', label: 'Método' },
 ]

@@ -1,7 +1,9 @@
 // ── Clients ─────────────────────────────────────────────────────────────────
 // Order: lower number = higher position on page.
 // Sorted by: demo quality (review count) → paying clients last.
-// Homepage: CLIENTS.slice(0, 9). Full portfolio: /clientes
+// Per-client detail pages live at /clientes/[slug] — linked from the
+// portfolio landing at /. The portfolio itself (formerly /clientes)
+// now lives at / .
 // NOTE: client-order.json in /public overrides this order.
 // Admin panel at /admin/clients can save new order → GitHub → redeploy.
 export const CLIENTS = [
