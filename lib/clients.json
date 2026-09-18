@@ -302,6 +302,168 @@
       "category": "Otros",
       "accent": "gray",
       "order": 5
+    },
+    {
+      "name": "Nexa Paraguay",
+      "slug": "nexa",
+      "url": "https://nexa.paragu-ai.com",
+      "desc": "Programa de reubicación para europeos — 4 idiomas",
+      "category": "Servicios Profesionales",
+      "accent": "indigo",
+      "order": 1
+    },
+    {
+      "name": "Nudo",
+      "slug": "nudo",
+      "url": "https://nudo.paragu-ai.com",
+      "desc": "Estudio de yoga y movimiento en Asunción",
+      "category": "Spa y Bienestar",
+      "accent": "teal",
+      "order": 5
+    },
+    {
+      "name": "Dayah LitWorks",
+      "slug": "dayah",
+      "url": "https://dayah-litworks.paragu-ai.com",
+      "desc": "Diseño de portadas — autora Amazon Prime Reading, 400+ portadas",
+      "category": "Servicios Profesionales",
+      "accent": "indigo",
+      "order": 2
+    },
+    {
+      "name": "El Gato Siamés",
+      "slug": "elgatosiames",
+      "url": "https://elgatosiames.com",
+      "desc": "Stand up comedy de Camilo Acosta — humor ácido y original",
+      "category": "Cultura y Espectáculos",
+      "accent": "fuchsia",
+      "order": 1
+    },
+    {
+      "name": "Estudio Contable",
+      "slug": "estudio-contable",
+      "url": "https://estudio-contable.paragu-ai.com",
+      "desc": "Estudio contable para PYMEs — impuestos y balances",
+      "category": "Servicios Profesionales",
+      "accent": "indigo",
+      "order": 3
+    },
+    {
+      "name": "Golden Visa Advisory",
+      "slug": "golden-visa",
+      "url": "https://golden-visa.paragu-ai.com",
+      "desc": "Asesoría para residencia por inversión en Paraguay",
+      "category": "Servicios Profesionales",
+      "accent": "indigo",
+      "order": 4
+    },
+    {
+      "name": "Oz Montanía",
+      "slug": "ozz",
+      "url": "https://ozmontania.paragu-ai.com",
+      "desc": "Artista visual, muralista e ilustrador paraguayo",
+      "category": "Cultura y Espectáculos",
+      "accent": "fuchsia",
+      "order": 2
+    },
+    {
+      "name": "Reinadecopas",
+      "slug": "reina-de-copas",
+      "url": "https://reinadecopas.paragu-ai.com",
+      "desc": "Tienda online de cerveza artesanal paraguaya",
+      "category": "Gastronomía",
+      "accent": "orange",
+      "order": 6
+    },
+    {
+      "name": "Trentina Cerveza",
+      "slug": "treinta-cerveza",
+      "url": "https://trentina-cerveza.paragu-ai.com",
+      "desc": "Cerveza artesanal de Santa Rita, Alto Paraná — tradición familiar",
+      "category": "Gastronomía",
+      "accent": "orange",
+      "order": 7
+    },
+    {
+      "name": "Bichos Gym",
+      "slug": "bichosgym",
+      "url": "https://bichosgym.paragu-ai.com",
+      "desc": "Entrenamiento funcional y crossfit",
+      "category": "Gimnasio y Fitness",
+      "accent": "emerald",
+      "order": 1
+    },
+    {
+      "name": "Mantra Spa",
+      "slug": "mantraspa",
+      "url": "https://mantraspa.paragu-ai.com",
+      "desc": "Masajes, tratamientos faciales y bienestar integral",
+      "category": "Spa y Bienestar",
+      "accent": "teal",
+      "order": 6
+    },
+    {
+      "name": "Superspuma",
+      "slug": "superspuma",
+      "url": "https://superspuma.paragu-ai.com",
+      "desc": "Ropa oversize y streetwear paraguayo",
+      "category": "Otros",
+      "accent": "gray",
+      "order": 1
+    },
+    {
+      "name": "Magnolia Flower",
+      "slug": "magnolia-flower",
+      "url": "https://magnolia-flower.paragu-ai.com",
+      "desc": "Flores y decoración de eventos",
+      "category": "Otros",
+      "accent": "rose",
+      "order": 1
+    },
+    {
+      "name": "XXGym",
+      "slug": "xxgym",
+      "url": "https://xxgym.paragu-ai.com",
+      "desc": "Gimnasio en Fernando de la Mora — leads activos",
+      "category": "Gimnasio y Fitness",
+      "accent": "emerald",
+      "order": 2
+    },
+    {
+      "name": "Cronos Academy",
+      "slug": "cronos-academy",
+      "url": "https://cronos-academy.paragu-ai.com",
+      "desc": "Academia crossfit y functional training en San Lorenzo",
+      "category": "Gimnasio y Fitness",
+      "accent": "emerald",
+      "order": 3
+    },
+    {
+      "name": "Villamayor & Asociados",
+      "slug": "villamayor-asociados",
+      "url": "https://villamayor-asociados.paragu-ai.com",
+      "desc": "Estudio jurídico — derecho civil, comercial e inmobiliario",
+      "category": "Servicios Profesionales",
+      "accent": "indigo",
+      "order": 5
+    },
+    {
+      "name": "Polki Squad",
+      "slug": "polki-squad",
+      "url": "https://polki-squad.paragu-ai.com",
+      "desc": "Estudio de uñas y nail art",
+      "category": "Belleza y Estética",
+      "accent": "rose",
+      "order": 9
+    },
+    {
+      "name": "Granja Cabral",
+      "slug": "granja-cabral",
+      "url": "https://granja-cabral.paragu-ai.com",
+      "desc": "Productos orgánicos de granja familiar",
+      "category": "Gastronomía",
+      "accent": "orange",
+      "order": 8
     }
   ]
 }
