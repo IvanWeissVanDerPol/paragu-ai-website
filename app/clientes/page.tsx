@@ -73,6 +73,28 @@ export default function ClientesPage() {
           </div>
         </section>
 
+        {/* Featured strip — directly after hero */}
+        <section className="bg-gray-950 px-5 py-14 md:py-20">
+          <div className="mx-auto max-w-6xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
+              Destacados
+            </span>
+            <h2 className="mt-3 text-2xl font-extrabold text-white md:text-3xl">
+              Los que más Leads generan
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-white/60 md:text-base">
+              Una muestra — clic en cada tarjeta abre el sitio real.
+            </p>
+            <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {featured.map((c) => (
+                <div key={c.slug} className="rounded-2xl ring-1 ring-white/10">
+                  <ClientCard c={c} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Sticky category nav (in-page) — counts removed per UX direction */}
         <nav className="sticky top-16 z-30 -mx-5 mb-10 border-y border-gray-200 bg-white/85 px-5 backdrop-blur-md md:-mx-0 md:rounded-2xl md:border md:px-4">
           <ul className="flex gap-1.5 overflow-x-auto py-2.5 text-sm font-medium text-gray-700 md:gap-2 md:py-3">
@@ -112,28 +134,6 @@ export default function ClientesPage() {
             )
           })}
         </div>
-
-        {/* Featured row — full-bleed dark */}
-        <section className="mt-16 bg-gray-950 px-5 py-14 md:mt-20 md:py-20">
-          <div className="mx-auto max-w-6xl">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
-              Destacados
-            </span>
-            <h2 className="mt-3 text-2xl font-extrabold text-white md:text-3xl">
-              Los que más Leads generan
-            </h2>
-            <p className="mt-2 max-w-xl text-sm text-white/60 md:text-base">
-              Una muestra — clic en cada tarjeta abre el sitio real.
-            </p>
-            <div className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {featured.map((c) => (
-                <div key={c.slug} className="rounded-2xl ring-1 ring-white/10">
-                  <ClientCard c={c} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Final CTA */}
         <section className="mx-auto mt-16 max-w-3xl px-5 text-center md:mt-20">
