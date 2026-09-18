@@ -23,7 +23,7 @@ export default function PorQuePage() {
             <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-white/60 transition-colors hover:text-white">
               <ArrowLeft size={14} /> Volver al inicio
             </Link>
-            <span className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-rose-500/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-300">
+            <span className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-teal-500/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-300">
               <AlertTriangle size={12} />
               La realidad
             </span>
@@ -58,7 +58,7 @@ export default function PorQuePage() {
               ))}
             </div>
 
-            <div className="mt-16 rounded-3xl bg-emerald-50 px-8 py-10 text-center md:px-12">
+            <div className="mt-16 rounded-3xl bg-teal-50 px-8 py-10 text-center md:px-12">
               <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 md:text-3xl">
                 ¿Y entonces qué hago?
               </h2>
@@ -69,13 +69,13 @@ export default function PorQuePage() {
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-2 rounded-full bg-gray-950 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 rounded-full bg-teal-600 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                 >
                   Ver sitios reales
                 </Link>
                 <a
                   href={waLink('Hola, quiero entender cómo puede ayudarme un sitio para mi negocio.')}
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-gray-900 px-6 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-900 hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-teal-600 px-6 py-3 text-sm font-semibold text-teal-700 transition-colors hover:bg-teal-600 hover:text-white"
                 >
                   Hablar por WhatsApp
                 </a>

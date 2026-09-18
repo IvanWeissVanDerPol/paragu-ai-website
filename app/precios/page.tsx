@@ -15,8 +15,10 @@ type Cell =
   | { included: false }
   | { included: true; note?: string }
 
-// Per-plan accents. No pure black — each plan gets a distinct color.
-// Emerald for the recommended Crecimiento plan.
+// Per-plan accents. AIW brand: teal/cyan only. Each plan uses a tonal
+// level so they stay visually distinct within the unified palette.
+// Crecimiento (recommended) gets the deepest teal so it stands out
+// without leaving the brand family.
 const PLAN_THEME: Record<string, {
   header: string
   row: string
@@ -33,39 +35,39 @@ const PLAN_THEME: Record<string, {
     bar:    'bg-slate-300',
     text:   'text-gray-900',
     chip:   'bg-slate-200 text-slate-700',
-    cta:    'bg-slate-900 text-white',
-    ctaHover: 'hover:bg-slate-700',
+    cta:    'bg-teal-700 text-white',
+    ctaHover: 'hover:bg-teal-600',
     footer: 'bg-slate-50',
   },
   presencia: {
-    header: 'bg-sky-50',
-    row:    'bg-sky-50/30',
-    bar:    'bg-sky-400',
-    text:   'text-sky-900',
-    chip:   'bg-sky-200 text-sky-800',
-    cta:    'bg-sky-600 text-white',
-    ctaHover: 'hover:bg-sky-500',
-    footer: 'bg-sky-50',
+    header: 'bg-teal-50',
+    row:    'bg-teal-50/30',
+    bar:    'bg-teal-400',
+    text:   'text-teal-900',
+    chip:   'bg-teal-200 text-teal-800',
+    cta:    'bg-teal-600 text-white',
+    ctaHover: 'hover:bg-teal-500',
+    footer: 'bg-teal-50',
   },
   crecimiento: {
-    header: 'bg-emerald-50',
-    row:    'bg-emerald-50/50',
-    bar:    'bg-emerald-500',
-    text:   'text-emerald-900',
-    chip:   'bg-emerald-500 text-white',
-    cta:    'bg-emerald-600 text-white',
-    ctaHover: 'hover:bg-emerald-500',
-    footer: 'bg-emerald-50',
+    header: 'bg-cyan-100',
+    row:    'bg-cyan-50/50',
+    bar:    'bg-cyan-600',
+    text:   'text-cyan-900',
+    chip:   'bg-cyan-700 text-white',
+    cta:    'bg-teal-700 text-white',
+    ctaHover: 'hover:bg-teal-600',
+    footer: 'bg-cyan-100',
   },
   profesional: {
-    header: 'bg-violet-50',
-    row:    'bg-violet-50/30',
-    bar:    'bg-violet-400',
-    text:   'text-violet-900',
-    chip:   'bg-violet-200 text-violet-800',
-    cta:    'bg-violet-600 text-white',
-    ctaHover: 'hover:bg-violet-500',
-    footer: 'bg-violet-50',
+    header: 'bg-teal-100',
+    row:    'bg-teal-50/30',
+    bar:    'bg-teal-700',
+    text:   'text-teal-900',
+    chip:   'bg-teal-800 text-white',
+    cta:    'bg-teal-800 text-white',
+    ctaHover: 'hover:bg-teal-700',
+    footer: 'bg-teal-100',
   },
 }
 
@@ -82,7 +84,7 @@ export default function PreciosPage() {
         {/* Hero */}
         <section className="bg-gray-50 py-16 md:py-20">
           <div className="mx-auto max-w-3xl px-5 text-center">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-700">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-700">
               Precios
             </span>
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
@@ -180,10 +182,10 @@ export default function PreciosPage() {
                               <div className="flex items-start gap-2">
                                 <Check
                                   size={15}
-                                  className={`mt-0.5 shrink-0 ${plan.id === 'crecimiento' ? 'text-emerald-600' : 'text-emerald-500'}`}
+                                  className={`mt-0.5 shrink-0 ${plan.id === 'crecimiento' ? 'text-cyan-700' : 'text-teal-600'}`}
                                 />
                                 {note ? (
-                                  <span className={`text-xs ${plan.id === 'crecimiento' ? 'text-emerald-900' : 'text-gray-700'}`}>
+                                  <span className={`text-xs ${plan.id === 'crecimiento' ? 'text-cyan-900' : 'text-gray-700'}`}>
                                     {note}
                                   </span>
                                 ) : null}
@@ -258,7 +260,7 @@ export default function PreciosPage() {
                         const note = cell?.note
                         return (
                           <li key={f.key} className="flex items-start gap-2">
-                            <Check size={14} className="mt-1 shrink-0 text-emerald-500" />
+                            <Check size={14} className="mt-1 shrink-0 text-teal-600" />
                             <span className="text-gray-700">
                               {f.label}
                               {note ? <span className="text-xs text-gray-500"> · {note}</span> : null}
@@ -296,7 +298,7 @@ export default function PreciosPage() {
                 'Hosting en la nube (uptime 99.9%)',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                  <Check size={15} className="mt-0.5 shrink-0 text-emerald-500" />
+                  <Check size={15} className="mt-0.5 shrink-0 text-teal-600" />
                   <span>{item}</span>
                 </li>
               ))}

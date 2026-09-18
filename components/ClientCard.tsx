@@ -1,61 +1,33 @@
 import { ExternalLink } from 'lucide-react'
 import ClientImage from './ClientImage'
 
-type Accent =
-  | 'primary' | 'rose' | 'amber' | 'emerald' | 'teal' | 'sky'
-  | 'orange' | 'violet' | 'indigo' | 'fuchsia' | 'gray'
+// AIW brand: teal/cyan only. Four tonal levels so verticals stay visually
+// distinct without breaking the unified brand palette.
+type Accent = 'tint' | 'mid' | 'cyan' | 'deep'
 
 const accentBg: Record<Accent, string> = {
-  primary: 'bg-primary-50',
-  rose:    'bg-rose-50',
-  amber:   'bg-amber-50',
-  emerald: 'bg-emerald-50',
-  teal:    'bg-teal-50',
-  sky:     'bg-sky-50',
-  orange:  'bg-orange-50',
-  violet:  'bg-violet-50',
-  indigo:  'bg-indigo-50',
-  fuchsia: 'bg-fuchsia-50',
-  gray:    'bg-gray-50',
+  tint: 'bg-teal-50',
+  mid:  'bg-teal-100',
+  cyan: 'bg-cyan-50',
+  deep: 'bg-teal-700',
 }
 const accentBar: Record<Accent, string> = {
-  primary: 'bg-primary-500',
-  rose:    'bg-rose-500',
-  amber:   'bg-amber-500',
-  emerald: 'bg-emerald-500',
-  teal:    'bg-teal-500',
-  sky:     'bg-sky-500',
-  orange:  'bg-orange-500',
-  violet:  'bg-violet-500',
-  indigo:  'bg-indigo-500',
-  fuchsia: 'bg-fuchsia-500',
-  gray:    'bg-gray-500',
+  tint: 'bg-teal-500',
+  mid:  'bg-teal-600',
+  cyan: 'bg-cyan-500',
+  deep: 'bg-teal-700',
 }
 const accentText: Record<Accent, string> = {
-  primary: 'text-primary-700',
-  rose:    'text-rose-700',
-  amber:   'text-amber-800',
-  emerald: 'text-emerald-700',
-  teal:    'text-teal-700',
-  sky:     'text-sky-700',
-  orange:  'text-orange-800',
-  violet:  'text-violet-700',
-  indigo:  'text-indigo-700',
-  fuchsia: 'text-fuchsia-700',
-  gray:    'text-gray-700',
+  tint: 'text-teal-700',
+  mid:  'text-teal-800',
+  cyan: 'text-cyan-700',
+  deep: 'text-white',
 }
 const accentRing: Record<Accent, string> = {
-  primary: 'ring-primary-200/60',
-  rose:    'ring-rose-200/60',
-  amber:   'ring-amber-200/60',
-  emerald: 'ring-emerald-200/60',
-  teal:    'ring-teal-200/60',
-  sky:     'ring-sky-200/60',
-  orange:  'ring-orange-200/60',
-  violet:  'ring-violet-200/60',
-  indigo:  'ring-indigo-200/60',
-  fuchsia: 'ring-fuchsia-200/60',
-  gray:    'ring-gray-200/60',
+  tint: 'ring-teal-200/60',
+  mid:  'ring-teal-300/60',
+  cyan: 'ring-cyan-200/60',
+  deep: 'ring-teal-700/60',
 }
 
 export type ClientCardData = {

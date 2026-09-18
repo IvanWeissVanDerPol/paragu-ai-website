@@ -8,16 +8,16 @@
     "Otros"
   ],
   "accents": {
-    "Belleza y Estética": "rose",
-    "Barbería": "amber",
-    "Gimnasio y Fitness": "emerald",
-    "Spa y Bienestar": "teal",
-    "Salud y Bienestar": "sky",
-    "Gastronomía": "orange",
-    "Eventos y Espacios": "violet",
-    "Servicios Profesionales": "indigo",
-    "Cultura y Espectáculos": "fuchsia",
-    "Otros": "gray"
+    "Belleza y Estética": "tint",
+    "Barbería": "mid",
+    "Gimnasio y Fitness": "cyan",
+    "Spa y Bienestar": "tint",
+    "Salud y Bienestar": "mid",
+    "Gastronomía": "cyan",
+    "Eventos y Espacios": "mid",
+    "Servicios Profesionales": "deep",
+    "Cultura y Espectáculos": "cyan",
+    "Otros": "tint"
   },
   "clients": [
     {
@@ -26,7 +26,7 @@
       "desc": "Beauty services — depilation",
       "url": "https://depiflash.paragu-ai.com",
       "category": "Belleza y Estética",
-      "accent": "rose",
+      "accent": "tint",
       "order": 3,
       "template_clone": false,
       "distinct": true
@@ -37,7 +37,7 @@
       "desc": "Hair salon",
       "url": "https://magnolia-peluqueria.paragu-ai.com",
       "category": "Belleza y Estética",
-      "accent": "rose",
+      "accent": "tint",
       "order": 6,
       "template_clone": false,
       "distinct": true
@@ -48,7 +48,7 @@
       "desc": "Barbershop — men's grooming",
       "url": "https://arnos-barber-shop.paragu-ai.com",
       "category": "Barbería",
-      "accent": "amber",
+      "accent": "mid",
       "order": 1,
       "template_clone": false,
       "distinct": true
@@ -59,7 +59,7 @@
       "desc": "Tattoo artist",
       "url": "https://camilo-acosta.paragu-ai.com",
       "category": "Cultura y Espectáculos",
-      "accent": "fuchsia",
+      "accent": "cyan",
       "order": 1,
       "template_clone": false,
       "distinct": true
@@ -70,7 +70,7 @@
       "desc": "Tattoo studio",
       "url": "https://jota-ink-tattoo.paragu-ai.com",
       "category": "Otros",
-      "accent": "gray",
+      "accent": "tint",
       "order": 3,
       "template_clone": false,
       "distinct": true
@@ -81,7 +81,7 @@
       "url": "https://nexaparaguay.com.py",
       "desc": "Programa de reubicación para europeos — 4 idiomas",
       "category": "Servicios Profesionales",
-      "accent": "indigo",
+      "accent": "deep",
       "order": 1,
       "template_clone": false,
       "distinct": true
@@ -92,7 +92,7 @@
       "url": "https://nudo.paragu-ai.com",
       "desc": "Estudio de yoga y movimiento en Asunción",
       "category": "Spa y Bienestar",
-      "accent": "teal",
+      "accent": "tint",
       "order": 5,
       "template_clone": false,
       "distinct": true
@@ -103,7 +103,7 @@
       "url": "https://dayah-litworks.paragu-ai.com",
       "desc": "Diseño de portadas — autora Amazon Prime Reading, 400+ portadas",
       "category": "Servicios Profesionales",
-      "accent": "indigo",
+      "accent": "deep",
       "order": 2,
       "template_clone": false,
       "distinct": true

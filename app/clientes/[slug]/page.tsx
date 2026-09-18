@@ -16,6 +16,33 @@ import type { Accent } from '@/lib/clients'
 
 type Props = { params: Promise<{ slug: string }> }
 
+// Static lookup for AIW brand accent classes (Tailwind cannot JIT classes
+// built with template literals + dynamic values).
+const ACCENT_TEXT: Record<Accent, string> = {
+  tint: 'text-teal-200',
+  mid:  'text-teal-300',
+  cyan: 'text-cyan-200',
+  deep: 'text-teal-100',
+}
+const ACCENT_BG: Record<Accent, string> = {
+  tint: 'bg-teal-50',
+  mid:  'bg-teal-100',
+  cyan: 'bg-cyan-50',
+  deep: 'bg-teal-700',
+}
+const ACCENT_BG_DARK: Record<Accent, string> = {
+  tint: 'bg-teal-900/30',
+  mid:  'bg-teal-800/30',
+  cyan: 'bg-cyan-900/30',
+  deep: 'bg-teal-700/40',
+}
+const ACCENT_FG: Record<Accent, string> = {
+  tint: 'text-teal-700',
+  mid:  'text-teal-800',
+  cyan: 'text-cyan-700',
+  deep: 'text-teal-900',
+}
+
 export async function generateStaticParams() {
   return getAllClients().map(c => ({ slug: c.slug }))
 }
@@ -40,7 +67,7 @@ export default async function ClientePage({ params }: Props) {
 
   const rubro = RUBROS[c.slug] ?? c.category
   const meta = CATEGORY_META[c.category]
-  const accent = (c.accent ?? 'gray') as Accent
+  const accent: Accent = (c.accent === 'tint' || c.accent === 'mid' || c.accent === 'cyan' || c.accent === 'deep') ? c.accent : 'tint'
   const hasScreenshot = SLUGS_WITH_SCREENSHOT.has(c.slug)
 
   // Same-category neighbors
@@ -63,7 +90,7 @@ export default async function ClientePage({ params }: Props) {
             </Link>
             <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div>
-                <span className={`inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-${accent}-200`}>
+                <span className={`inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${ACCENT_TEXT[accent]}`}>
                   {meta?.icon && <meta.icon size={12} />}
                   {meta?.label ?? c.category}
                 </span>
@@ -108,8 +135,8 @@ export default async function ClientePage({ params }: Props) {
                   loading="eager"
                 />
               ) : (
-                <div className={`flex aspect-[16/9] items-center justify-center bg-${accent}-50`}>
-                  <span className={`text-9xl font-black text-${accent}-500 opacity-80`}>
+                <div className={`flex aspect-[16/9] items-center justify-center ${ACCENT_BG[accent]}`}>
+                  <span className={`text-9xl font-black ${ACCENT_FG[accent]} opacity-80`}>
                     {c.name.charAt(0).toUpperCase()}
                   </span>
                 </div>
@@ -144,8 +171,6 @@ export default async function ClientePage({ params }: Props) {
             title={`Otros ${meta.label.toLowerCase()} que hicimos`}
             subtitle={`Más sitios del mismo rubro que ${c.name}.`}
             icon={meta.icon}
-            count={neighbors.length}
-            accent={accent}
             clients={neighbors.map(n => ({
               name: n.name,
               slug: n.slug,

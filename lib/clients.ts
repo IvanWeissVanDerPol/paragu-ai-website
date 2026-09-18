@@ -4,9 +4,9 @@ import {
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
-export type Accent =
-  | 'primary' | 'rose' | 'amber' | 'emerald' | 'teal' | 'sky'
-  | 'orange' | 'violet' | 'indigo' | 'fuchsia' | 'gray'
+// AIW brand: teal/cyan only. Four tonal levels so verticals stay visually
+// distinct without breaking the unified brand palette.
+export type Accent = 'tint' | 'mid' | 'cyan' | 'deep'
 
 export type ClientRow = {
   name: string

@@ -12,32 +12,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/rubros' },
 }
 
+// AIW brand: teal/cyan only. Four tonal levels so verticals stay visually
+// distinct without breaking the unified brand palette.
 const accentChip: Record<string, string> = {
-  primary: 'bg-primary-50 text-primary-700',
-  rose:    'bg-rose-50 text-rose-700',
-  amber:   'bg-amber-50 text-amber-800',
-  emerald: 'bg-emerald-50 text-emerald-700',
-  teal:    'bg-teal-50 text-teal-700',
-  sky:     'bg-sky-50 text-sky-700',
-  orange:  'bg-orange-50 text-orange-800',
-  violet:  'bg-violet-50 text-violet-700',
-  indigo:  'bg-indigo-50 text-indigo-700',
-  fuchsia: 'bg-fuchsia-50 text-fuchsia-700',
-  gray:    'bg-gray-100 text-gray-700',
+  tint: 'bg-teal-50 text-teal-700',
+  mid:  'bg-teal-100 text-teal-800',
+  cyan: 'bg-cyan-50 text-cyan-700',
+  deep: 'bg-teal-700 text-white',
 }
 
 const accentBorder: Record<string, string> = {
-  primary: 'border-primary-200 hover:border-primary-500',
-  rose:    'border-rose-200 hover:border-rose-500',
-  amber:   'border-amber-200 hover:border-amber-500',
-  emerald: 'border-emerald-200 hover:border-emerald-500',
-  teal:    'border-teal-200 hover:border-teal-500',
-  sky:     'border-sky-200 hover:border-sky-500',
-  orange:  'border-orange-200 hover:border-orange-500',
-  violet:  'border-violet-200 hover:border-violet-500',
-  indigo:  'border-indigo-200 hover:border-indigo-500',
-  fuchsia: 'border-fuchsia-200 hover:border-fuchsia-500',
-  gray:    'border-gray-200 hover:border-gray-500',
+  tint: 'border-teal-200 hover:border-teal-500',
+  mid:  'border-teal-300 hover:border-teal-600',
+  cyan: 'border-cyan-200 hover:border-cyan-500',
+  deep: 'border-teal-700 hover:border-teal-800',
 }
 
 export default function RubrosPage() {
@@ -50,7 +38,7 @@ export default function RubrosPage() {
             <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-white/60 transition-colors hover:text-white">
               <ArrowLeft size={14} /> Volver al inicio
             </Link>
-            <span className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-violet-500/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-violet-200">
+            <span className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-teal-500/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-200">
               Para tu rubro
             </span>
             <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
