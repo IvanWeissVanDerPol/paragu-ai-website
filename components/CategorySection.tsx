@@ -10,8 +10,6 @@ type Props = {
   title: string
   subtitle?: string
   icon?: LucideIcon
-  count: number
-  accent: Accent
   clients: ClientCardData[]
 }
 
@@ -29,15 +27,11 @@ const accentBgSoft: Record<Accent, string> = {
   gray:    'bg-gray-50/60',
 }
 
-export function CategorySection({ id, title, subtitle, icon: Icon, count, accent, clients }: Props) {
+export function CategorySection({ id, title, subtitle, icon: Icon, clients }: Props) {
   return (
-    <section id={id} className={`relative scroll-mt-28 rounded-3xl ${accentBgSoft[accent]} px-4 py-10 md:px-8 md:py-14`}>
+    <section id={id} className={`relative scroll-mt-28 rounded-3xl ${accentBgSoft[clients[0]?.accent ?? 'gray']} px-4 py-10 md:px-8 md:py-14`}>
       <div className="mb-6 flex items-end justify-between gap-4 md:mb-8">
         <div>
-          <p className={`inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-${accent}-700`}>
-            {Icon && <Icon size={14} strokeWidth={2.5} />}
-            {count} {count === 1 ? 'sitio' : 'sitios'} en vivo
-          </p>
           <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-gray-900 md:text-3xl">
             {title}
           </h2>

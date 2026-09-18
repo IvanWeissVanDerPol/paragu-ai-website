@@ -49,7 +49,7 @@ export default function ClientesPage() {
               Portafolio público
             </span>
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight md:text-6xl">
-              {total} sitios en vivo.
+              Sitios que armamos para negocios paraguayos.
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
               Cada uno es un negocio paraguayo real — peluquería, barbería, gimnasio,
@@ -73,7 +73,7 @@ export default function ClientesPage() {
           </div>
         </section>
 
-        {/* Sticky category nav (in-page) */}
+        {/* Sticky category nav (in-page) — counts removed per UX direction */}
         <nav className="sticky top-16 z-30 -mx-5 mb-10 border-y border-gray-200 bg-white/85 px-5 backdrop-blur-md md:-mx-0 md:rounded-2xl md:border md:px-4">
           <ul className="flex gap-1.5 overflow-x-auto py-2.5 text-sm font-medium text-gray-700 md:gap-2 md:py-3">
             {CATEGORY_ORDER.filter((c) => grouped[c]?.length).map((cat) => {
@@ -87,9 +87,6 @@ export default function ClientesPage() {
                   >
                     {Icon && <Icon size={12} />}
                     {meta?.label ?? cat}
-                    <span className="ml-1 rounded-full bg-white px-1.5 text-[10px] font-bold text-gray-600">
-                      {grouped[cat].length}
-                    </span>
                   </a>
                 </li>
               )
@@ -110,8 +107,6 @@ export default function ClientesPage() {
                 title={meta?.label ?? cat}
                 subtitle={meta?.subtitle}
                 icon={meta?.icon}
-                count={clients.length}
-                accent={clients[0]?.accent ?? 'gray'}
                 clients={clients}
               />
             )

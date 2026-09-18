@@ -71,7 +71,7 @@ export default function PorQuePage() {
                   href="/clientes"
                   className="inline-flex items-center gap-2 rounded-full bg-gray-950 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                 >
-                  Ver 31 sitios reales
+                  Ver sitios reales
                 </Link>
                 <a
                   href={waLink('Hola, quiero entender cómo puede ayudarme un sitio para mi negocio.')}

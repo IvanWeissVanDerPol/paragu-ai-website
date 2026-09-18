@@ -88,13 +88,13 @@ function Hero() {
                 href="/clientes"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
               >
-                Ver 49 sitios reales
+                Ver sitios reales
                 <ExternalLink size={16} />
               </Link>
             </div>
 
             <p className="mt-6 text-sm text-white/55">
-              49 negocios paraguayos en vivo · Sin tarjeta · Sin permanencia
+              Negocios paraguayos en vivo · Sin tarjeta · Sin permanencia
             </p>
           </div>
 
@@ -274,14 +274,14 @@ function FeaturedSection() {
               Son negocios reales
             </span>
             <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-gray-900 md:text-3xl">
-              Una muestra de los 49
+              Una muestra
             </h2>
           </div>
           <Link
             href="/clientes"
             className="inline-flex items-center gap-1 rounded-full border border-gray-300 bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100"
           >
-            Ver los 49 sitios
+            Ver todos los sitios
             <ArrowRight size={14} />
           </Link>
         </div>
