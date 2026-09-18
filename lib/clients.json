@@ -31,7 +31,9 @@
       "url": "https://barbye-nails.paragu-ai.com",
       "category": "Belleza y Estética",
       "accent": "rose",
-      "order": 1
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "clau-bellino",
@@ -40,7 +42,9 @@
       "url": "https://clau-bellino.paragu-ai.com",
       "category": "Belleza y Estética",
       "accent": "rose",
-      "order": 2
+      "order": 2,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "depiflash",
@@ -49,7 +53,9 @@
       "url": "https://depiflash.paragu-ai.com",
       "category": "Belleza y Estética",
       "accent": "rose",
-      "order": 3
+      "order": 3,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "lele-ferreira",
@@ -58,7 +64,9 @@
       "url": "https://lele-ferreira.paragu-ai.com",
       "category": "Belleza y Estética",
       "accent": "rose",
-      "order": 4
+      "order": 4,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "leticia-carballo",
@@ -67,7 +75,9 @@
       "url": "https://leticia-carballo.paragu-ai.com",
       "category": "Belleza y Estética",
       "accent": "rose",
-      "order": 5
+      "order": 5,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "magnolia-peluqueria",
@@ -76,25 +86,9 @@
       "url": "https://magnolia-peluqueria.paragu-ai.com",
       "category": "Belleza y Estética",
       "accent": "rose",
-      "order": 6
-    },
-    {
-      "slug": "shine-nails",
-      "name": "Shine Nails",
-      "desc": "Nail salon",
-      "url": "https://shine-nails.paragu-ai.com",
-      "category": "Belleza y Estética",
-      "accent": "rose",
-      "order": 7
-    },
-    {
-      "slug": "woman-cosmeticos",
-      "name": "Woman Cosméticos",
-      "desc": "Cosmetics retail",
-      "url": "https://woman-cosmeticos.paragu-ai.com",
-      "category": "Belleza y Estética",
-      "accent": "rose",
-      "order": 8
+      "order": 6,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "arnos-barber-shop",
@@ -103,16 +97,9 @@
       "url": "https://arnos-barber-shop.paragu-ai.com",
       "category": "Barbería",
       "accent": "amber",
-      "order": 1
-    },
-    {
-      "slug": "barbershop-peluqueria",
-      "name": "Barbershop Peluquería",
-      "desc": "Barbershop",
-      "url": "https://barbershop-peluqueria.paragu-ai.com",
-      "category": "Barbería",
-      "accent": "amber",
-      "order": 2
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "nde-barba",
@@ -121,16 +108,9 @@
       "url": "https://nde-barba.paragu-ai.com",
       "category": "Barbería",
       "accent": "amber",
-      "order": 3
-    },
-    {
-      "slug": "peluqueria-barbershop",
-      "name": "Peluquería Barbershop",
-      "desc": "Barbershop",
-      "url": "https://peluqueria-barbershop.paragu-ai.com",
-      "category": "Barbería",
-      "accent": "amber",
-      "order": 4
+      "order": 3,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "portas-barber",
@@ -139,16 +119,9 @@
       "url": "https://portas-barber.paragu-ai.com",
       "category": "Barbería",
       "accent": "amber",
-      "order": 5
-    },
-    {
-      "slug": "cuidadoamiga",
-      "name": "Cuidado Amiga",
-      "desc": "Wellness / companion care",
-      "url": "https://cuidadoamiga.paragu-ai.com",
-      "category": "Spa y Bienestar",
-      "accent": "teal",
-      "order": 1
+      "order": 5,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "hidrobaby-spa",
@@ -157,7 +130,9 @@
       "url": "https://hidrobaby-spa.paragu-ai.com",
       "category": "Spa y Bienestar",
       "accent": "teal",
-      "order": 2
+      "order": 2,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "nutrifit-spa",
@@ -166,70 +141,9 @@
       "url": "https://nutrifit-spa.paragu-ai.com",
       "category": "Spa y Bienestar",
       "accent": "teal",
-      "order": 3
-    },
-    {
-      "slug": "salud-abierta",
-      "name": "Salud Abierta",
-      "desc": "Open data — healthcare transparency",
-      "url": "https://salud-abierta.paragu-ai.com",
-      "category": "Spa y Bienestar",
-      "accent": "teal",
-      "order": 4
-    },
-    {
-      "slug": "de-abasto-a-casa",
-      "name": "De Abasto a Casa",
-      "desc": "Food delivery / market",
-      "url": "https://de-abasto-a-casa.paragu-ai.com",
-      "category": "Gastronomía",
-      "accent": "orange",
-      "order": 1
-    },
-    {
-      "slug": "meal-prep",
-      "name": "Meal Prep",
-      "desc": "Meal prep service",
-      "url": "https://meal-prep.paragu-ai.com",
-      "category": "Gastronomía",
-      "accent": "orange",
-      "order": 2
-    },
-    {
-      "slug": "stroopwafel-huis",
-      "name": "Stroopwafel Huis",
-      "desc": "Dutch stroopwafels",
-      "url": "https://stroopwafel-huis.paragu-ai.com",
-      "category": "Gastronomía",
-      "accent": "orange",
-      "order": 3
-    },
-    {
-      "slug": "trentina-cerveza",
-      "name": "Trentina Cerveza",
-      "desc": "Craft brewery",
-      "url": "https://trentina-cerveza.paragu-ai.com",
-      "category": "Gastronomía",
-      "accent": "orange",
-      "order": 4
-    },
-    {
-      "slug": "tsuki-restaurante",
-      "name": "Tsuki Restaurante",
-      "desc": "Japanese restaurant",
-      "url": "https://tsuki-restaurante.paragu-ai.com",
-      "category": "Gastronomía",
-      "accent": "orange",
-      "order": 5
-    },
-    {
-      "slug": "fun4me-store",
-      "name": "Fun4Me Store",
-      "desc": "Event store",
-      "url": "https://fun4me-store.paragu-ai.com",
-      "category": "Eventos y Espacios",
-      "accent": "violet",
-      "order": 1
+      "order": 3,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "maskarada",
@@ -238,16 +152,9 @@
       "url": "https://maskarada.paragu-ai.com",
       "category": "Eventos y Espacios",
       "accent": "violet",
-      "order": 2
-    },
-    {
-      "slug": "rockabar",
-      "name": "Rock a Bar",
-      "desc": "Bar / events venue",
-      "url": "https://rockabar.paragu-ai.com",
-      "category": "Eventos y Espacios",
-      "accent": "violet",
-      "order": 3
+      "order": 2,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "camilo-acosta",
@@ -256,7 +163,9 @@
       "url": "https://camilo-acosta.paragu-ai.com",
       "category": "Cultura y Espectáculos",
       "accent": "fuchsia",
-      "order": 1
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "avani-belleza",
@@ -265,7 +174,9 @@
       "url": "https://avani-belleza.paragu-ai.com",
       "category": "Otros",
       "accent": "gray",
-      "order": 1
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "estudio-medieval",
@@ -274,7 +185,9 @@
       "url": "https://estudio-medieval.paragu-ai.com",
       "category": "Otros",
       "accent": "gray",
-      "order": 2
+      "order": 2,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "jota-ink-tattoo",
@@ -283,7 +196,9 @@
       "url": "https://jota-ink-tattoo.paragu-ai.com",
       "category": "Otros",
       "accent": "gray",
-      "order": 3
+      "order": 3,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "scott-tatuajes",
@@ -292,7 +207,9 @@
       "url": "https://scott-tatuajes.paragu-ai.com",
       "category": "Otros",
       "accent": "gray",
-      "order": 4
+      "order": 4,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "slug": "viviesteticpy",
@@ -301,7 +218,9 @@
       "url": "https://viviesteticpy.paragu-ai.com",
       "category": "Otros",
       "accent": "gray",
-      "order": 5
+      "order": 5,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Nexa Paraguay",
@@ -310,7 +229,9 @@
       "desc": "Programa de reubicación para europeos — 4 idiomas",
       "category": "Servicios Profesionales",
       "accent": "indigo",
-      "order": 1
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Nudo",
@@ -319,7 +240,9 @@
       "desc": "Estudio de yoga y movimiento en Asunción",
       "category": "Spa y Bienestar",
       "accent": "teal",
-      "order": 5
+      "order": 5,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Dayah LitWorks",
@@ -328,7 +251,9 @@
       "desc": "Diseño de portadas — autora Amazon Prime Reading, 400+ portadas",
       "category": "Servicios Profesionales",
       "accent": "indigo",
-      "order": 2
+      "order": 2,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "El Gato Siamés",
@@ -337,7 +262,9 @@
       "desc": "Stand up comedy de Camilo Acosta — humor ácido y original",
       "category": "Cultura y Espectáculos",
       "accent": "fuchsia",
-      "order": 1
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Estudio Contable",
@@ -346,7 +273,9 @@
       "desc": "Estudio contable para PYMEs — impuestos y balances",
       "category": "Servicios Profesionales",
       "accent": "indigo",
-      "order": 3
+      "order": 3,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Golden Visa Advisory",
@@ -355,7 +284,9 @@
       "desc": "Asesoría para residencia por inversión en Paraguay",
       "category": "Servicios Profesionales",
       "accent": "indigo",
-      "order": 4
+      "order": 4,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Oz Montanía",
@@ -364,16 +295,9 @@
       "desc": "Artista visual, muralista e ilustrador paraguayo",
       "category": "Cultura y Espectáculos",
       "accent": "fuchsia",
-      "order": 2
-    },
-    {
-      "name": "Reinadecopas",
-      "slug": "reina-de-copas",
-      "url": "https://reinadecopas.paragu-ai.com",
-      "desc": "Tienda online de cerveza artesanal paraguaya",
-      "category": "Gastronomía",
-      "accent": "orange",
-      "order": 6
+      "order": 2,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Trentina Cerveza",
@@ -382,7 +306,9 @@
       "desc": "Cerveza artesanal de Santa Rita, Alto Paraná — tradición familiar",
       "category": "Gastronomía",
       "accent": "orange",
-      "order": 7
+      "order": 7,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Bichos Gym",
@@ -391,7 +317,9 @@
       "desc": "Entrenamiento funcional y crossfit",
       "category": "Gimnasio y Fitness",
       "accent": "emerald",
-      "order": 1
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Mantra Spa",
@@ -400,7 +328,9 @@
       "desc": "Masajes, tratamientos faciales y bienestar integral",
       "category": "Spa y Bienestar",
       "accent": "teal",
-      "order": 6
+      "order": 6,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Superspuma",
@@ -409,7 +339,9 @@
       "desc": "Ropa oversize y streetwear paraguayo",
       "category": "Otros",
       "accent": "gray",
-      "order": 1
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Magnolia Flower",
@@ -418,7 +350,9 @@
       "desc": "Flores y decoración de eventos",
       "category": "Otros",
       "accent": "rose",
-      "order": 1
+      "order": 1,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "XXGym",
@@ -427,7 +361,9 @@
       "desc": "Gimnasio en Fernando de la Mora — leads activos",
       "category": "Gimnasio y Fitness",
       "accent": "emerald",
-      "order": 2
+      "order": 2,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Cronos Academy",
@@ -436,7 +372,9 @@
       "desc": "Academia crossfit y functional training en San Lorenzo",
       "category": "Gimnasio y Fitness",
       "accent": "emerald",
-      "order": 3
+      "order": 3,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Villamayor & Asociados",
@@ -445,7 +383,9 @@
       "desc": "Estudio jurídico — derecho civil, comercial e inmobiliario",
       "category": "Servicios Profesionales",
       "accent": "indigo",
-      "order": 5
+      "order": 5,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Polki Squad",
@@ -454,7 +394,9 @@
       "desc": "Estudio de uñas y nail art",
       "category": "Belleza y Estética",
       "accent": "rose",
-      "order": 9
+      "order": 9,
+      "template_clone": false,
+      "distinct": true
     },
     {
       "name": "Granja Cabral",
@@ -463,7 +405,9 @@
       "desc": "Productos orgánicos de granja familiar",
       "category": "Gastronomía",
       "accent": "orange",
-      "order": 8
+      "order": 8,
+      "template_clone": false,
+      "distinct": true
     }
   ]
 }

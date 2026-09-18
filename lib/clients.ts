@@ -100,7 +100,7 @@ export function getClientsByCategory(): Record<string, ClientRow[]> {
 }
 
 export const SLUGS_WITH_SCREENSHOT = new Set<string>([
-  // 32 valid live-site screenshots captured 2026-09-17.
+  // Visually-distinct live-site screenshots (no template-clones).
   // Anything NOT in this set gets a colored monogram fallback card.
   'arnos-barber-shop', 'avani-belleza', 'barbye-nails', 'bichosgym',
   'camilo-acosta', 'clau-bellino', 'cronos-academy', 'dayah',
@@ -108,6 +108,6 @@ export const SLUGS_WITH_SCREENSHOT = new Set<string>([
   'golden-visa', 'hidrobaby-spa', 'jota-ink-tattoo', 'lele-ferreira',
   'leticia-carballo', 'magnolia-flower', 'magnolia-peluqueria',
   'mantraspa', 'nde-barba', 'nexa', 'nudo', 'nutrifit-spa', 'ozz',
-  'portas-barber', 'reina-de-copas', 'scott-tatuajes', 'superspuma',
+  'portas-barber', 'reinadecopas', 'scott-tatuajes', 'superspuma',
   'treinta-cerveza', 'villamayor-asociados', 'xxgym',
 ])

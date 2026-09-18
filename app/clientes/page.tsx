@@ -11,7 +11,7 @@ import {
 } from '@/lib/clients'
 
 export const metadata: Metadata = {
-  title: '34 sitios en vivo · ParaguAI',
+  title: 'Sitios en vivo · ParaguAI',
   description:
     'Sitios reales que ya venden online con ParaguAI. Peluquerías, barberías, gimnasios, spas, gastronomía, eventos y más — todos construidos y mantenidos por nosotros.',
   alternates: { canonical: '/clientes' },
