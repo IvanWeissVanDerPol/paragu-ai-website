@@ -463,9 +463,33 @@ export const GUARANTEES = [
 
 // ── Plans ─────────────────────────────────────────────────────────────────────
 // Pricing model: monthly hosting is the recurring cost; the setup fee
-// covers the first 7-8 months of features up-front (effectively the
-// "annual payment" option — pay once and you're covered for ~7-8 months
+// covers the first 3 months of features up-front (effectively the
+// "annual payment" option — pay once and you're covered for 3 months
 // before monthly starts).
+//
+// Feature matrix: FEATURES is the master list. Each plan's `features`
+// is a map of `featureKey: included` (boolean) or `{ included, note? }`
+// for plan-specific notes (e.g. "7 meses" vs "8 meses" included time).
+// This makes cross-plan comparison renderable as a table.
+export const PLAN_FEATURES = [
+  { key: 'sitio',            label: 'Sitio completo' },
+  { key: 'dominio',          label: 'Dominio propio .com.py' },
+  { key: 'paginas',          label: 'Páginas',                 note: 'cantidad incluida' },
+  { key: 'fotos',            label: 'Fotos optimizadas',       note: 'cantidad incluida' },
+  { key: 'whatsapp',         label: 'WhatsApp Business' },
+  { key: 'seo',              label: 'SEO + Google Maps' },
+  { key: 'reservas',         label: 'Reservas online' },
+  { key: 'catalogo',         label: 'Catálogo de productos',   note: 'productos incluidos' },
+  { key: 'blog',             label: 'Blog + analytics' },
+  { key: 'emails',           label: 'Emails profesionales' },
+  { key: 'cambios',          label: 'Cambios de contenido',    note: 'por mes' },
+  { key: 'soporte',          label: 'Soporte por WhatsApp' },
+  { key: 'ssl',              label: 'SSL (candadito verde)' },
+  { key: 'multi_idioma',     label: 'Sitio multi-idioma' },
+] as const
+
+type FeatureKey = (typeof PLAN_FEATURES)[number]['key']
+
 export const PLANS = [
   {
     id: 'prueba',
@@ -477,18 +501,25 @@ export const PLANS = [
     popular: false,
     description:
       'Probá todo lo que ofrecemos antes de pagar nada. Sin tarjeta, sin compromiso.',
-    features: [
-      { text: 'Tu sitio en subdominio .paragu-ai.com', included: true },
-      { text: 'WhatsApp + Google Maps + SSL', included: true },
-      { text: 'Soporte por WhatsApp', included: true },
-      { text: 'Demo lista en 48h', included: true },
-      { text: 'Después: seguís online (marca ParaguAI) o pasás a plan pago', included: true },
-      { text: 'Dominio propio (.com.py)', included: false },
-      { text: 'Sin marca ParaguAI', included: false },
-    ],
     cta: 'Pedir demo gratis',
     waMsg:
       'Hola, quiero una demo gratis de mi sitio web con ParaguAI.',
+    features: {
+      sitio:        { included: true,  note: 'en subdominio paragu-ai.com' },
+      dominio:      { included: false },
+      paginas:      { included: false },
+      fotos:        { included: false },
+      whatsapp:     { included: true },
+      seo:          { included: true },
+      reservas:     { included: false },
+      catalogo:     { included: false },
+      blog:         { included: false },
+      emails:       { included: false },
+      cambios:      { included: false },
+      soporte:      { included: true },
+      ssl:          { included: true },
+      multi_idioma: { included: false },
+    },
   },
   {
     id: 'presencia',
@@ -501,19 +532,25 @@ export const PLANS = [
     popular: false,
     description:
       'Tu primer sitio profesional con dominio propio.',
-    features: [
-      { text: 'Sitio completo con dominio propio .com.py', included: true },
-      { text: 'Hasta 5 páginas', included: true },
-      { text: 'Hasta 15 fotos optimizadas', included: true },
-      { text: 'Formulario + WhatsApp Business', included: true },
-      { text: 'SEO básico + Google Maps', included: true },
-      { text: '2 cambios de contenido al mes', included: true },
-      { text: 'Soporte dedicado por WhatsApp', included: true },
-      { text: 'SSL + emails profesionales', included: true },
-    ],
     cta: 'Comenzar Presencia',
     waMsg:
       'Hola, me interesa el plan Presencia (Gs 100.000/mes + setup Gs 300.000 que cubre 3 meses).',
+    features: {
+      sitio:        { included: true },
+      dominio:      { included: true },
+      paginas:      { included: true,  note: 'hasta 5' },
+      fotos:        { included: true,  note: 'hasta 15' },
+      whatsapp:     { included: true },
+      seo:          { included: true,  note: 'básico' },
+      reservas:     { included: false },
+      catalogo:     { included: false },
+      blog:         { included: false },
+      emails:       { included: true },
+      cambios:      { included: true,  note: '2 por mes' },
+      soporte:      { included: true,  note: 'dedicado' },
+      ssl:          { included: true },
+      multi_idioma: { included: false },
+    },
   },
   {
     id: 'crecimiento',
@@ -526,18 +563,25 @@ export const PLANS = [
     popular: true,
     description:
       'Reservas online, blog y catálogo de productos.',
-    features: [
-      { text: 'Todo lo de Presencia + páginas ilimitadas', included: true },
-      { text: 'Sistema de reservas online', included: true },
-      { text: 'Catálogo con hasta 20 productos', included: true },
-      { text: 'Blog + analytics avanzado', included: true },
-      { text: 'SEO avanzado + Schema.org', included: true },
-      { text: '5 cambios al mes + soporte prioritario', included: true },
-      { text: 'Emails profesionales con tu dominio', included: true },
-    ],
     cta: 'Comenzar Crecimiento',
     waMsg:
       'Hola, me interesa el plan Crecimiento (Gs 150.000/mes + setup Gs 450.000 que cubre 3 meses).',
+    features: {
+      sitio:        { included: true },
+      dominio:      { included: true },
+      paginas:      { included: true,  note: 'ilimitadas' },
+      fotos:        { included: true,  note: 'ilimitadas' },
+      whatsapp:     { included: true },
+      seo:          { included: true,  note: 'avanzado + Schema.org' },
+      reservas:     { included: true },
+      catalogo:     { included: true,  note: 'hasta 20 productos' },
+      blog:         { included: true,  note: 'analytics avanzado' },
+      emails:       { included: true },
+      cambios:      { included: true,  note: '5 por mes, prioritario' },
+      soporte:      { included: true,  note: 'dedicado prioritario' },
+      ssl:          { included: true },
+      multi_idioma: { included: false },
+    },
   },
   {
     id: 'profesional',
@@ -550,18 +594,25 @@ export const PLANS = [
     popular: false,
     description:
       'Cadenas, franquicias y multi-sucursal. Sin límite de tiempo.',
-    features: [
-      { text: 'Todo lo de Crecimiento sin límite de tiempo', included: true },
-      { text: 'Hasta 5 sucursales / locales', included: true },
-      { text: 'Sitio multi-idioma (es/en/pt)', included: true },
-      { text: 'Integraciones personalizadas', included: true },
-      { text: 'Account manager dedicado', included: true },
-      { text: 'SLA 99.9% uptime', included: true },
-      { text: '10 horas de desarrollo al mes', included: true },
-    ],
     cta: 'Hablar con ventas',
     waMsg:
       'Hola, me interesa el plan Profesional (Gs 300.000/mes + setup Gs 900.000 que cubre 3 meses). Quiero hablar con ventas.',
+    features: {
+      sitio:        { included: true },
+      dominio:      { included: true },
+      paginas:      { included: true,  note: 'ilimitadas' },
+      fotos:        { included: true,  note: 'ilimitadas' },
+      whatsapp:     { included: true },
+      seo:          { included: true,  note: 'avanzado + Schema.org' },
+      reservas:     { included: true },
+      catalogo:     { included: true,  note: 'sin límite' },
+      blog:         { included: true,  note: 'analytics avanzado' },
+      emails:       { included: true },
+      cambios:      { included: true,  note: 'prioritario' },
+      soporte:      { included: true,  note: 'account manager dedicado' },
+      ssl:          { included: true },
+      multi_idioma: { included: true,  note: 'es/en/pt' },
+    },
   },
 ] as const
 
