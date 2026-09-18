@@ -493,8 +493,8 @@ export const PLANS = [
     name: 'Presencia',
     monthly: 'Gs 100.000',
     monthlyNote: 'por mes de hosting',
-    setup: 'Gs 650.000',
-    setupNote: 'cubre los primeros 7 meses',
+    setup: 'Gs 300.000',
+    setupNote: 'cubre los primeros 3 meses',
     badge: null,
     popular: false,
     description:
@@ -511,15 +511,15 @@ export const PLANS = [
     ],
     cta: 'Comenzar Presencia',
     waMsg:
-      'Hola, me interesa el plan Presencia (Gs 100.000/mes + setup Gs 650.000 que cubre 7 meses).',
+      'Hola, me interesa el plan Presencia (Gs 100.000/mes + setup Gs 300.000 que cubre 3 meses).',
   },
   {
     id: 'crecimiento',
     name: 'Crecimiento',
     monthly: 'Gs 150.000',
     monthlyNote: 'por mes de hosting',
-    setup: 'Gs 1.200.000',
-    setupNote: 'cubre los primeros 8 meses',
+    setup: 'Gs 450.000',
+    setupNote: 'cubre los primeros 3 meses',
     badge: 'Más recomendado',
     popular: true,
     description:
@@ -535,15 +535,15 @@ export const PLANS = [
     ],
     cta: 'Comenzar Crecimiento',
     waMsg:
-      'Hola, me interesa el plan Crecimiento (Gs 150.000/mes + setup Gs 1.200.000 que cubre 8 meses).',
+      'Hola, me interesa el plan Crecimiento (Gs 150.000/mes + setup Gs 450.000 que cubre 3 meses).',
   },
   {
     id: 'profesional',
     name: 'Profesional',
     monthly: 'Gs 300.000',
     monthlyNote: 'por mes de hosting',
-    setup: 'Gs 2.200.000',
-    setupNote: 'pago único',
+    setup: 'Gs 900.000',
+    setupNote: 'cubre los primeros 3 meses',
     badge: null,
     popular: false,
     description:
@@ -559,7 +559,7 @@ export const PLANS = [
     ],
     cta: 'Hablar con ventas',
     waMsg:
-      'Hola, me interesa el plan Profesional (Gs 300.000/mes + setup Gs 2.200.000). Quiero hablar con ventas.',
+      'Hola, me interesa el plan Profesional (Gs 300.000/mes + setup Gs 900.000 que cubre 3 meses). Quiero hablar con ventas.',
   },
 ] as const
 
