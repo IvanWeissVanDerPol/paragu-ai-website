@@ -460,12 +460,17 @@ export const GUARANTEES = [
 ] as const
 
 // ── Plans ─────────────────────────────────────────────────────────────────────
+// Pricing model: monthly hosting is the recurring cost; the setup fee
+// covers the first 7-8 months of features up-front (effectively the
+// "annual payment" option — pay once and you're covered for ~7-8 months
+// before monthly starts).
 export const PLANS = [
   {
     id: 'prueba',
     name: 'Prueba',
-    setup: 'Gratis',
-    monthly: null,
+    monthly: 'Gratis',
+    monthlyNote: 'para empezar',
+    setup: null,
     badge: null,
     popular: false,
     description:
@@ -486,60 +491,64 @@ export const PLANS = [
   {
     id: 'presencia',
     name: 'Presencia',
+    monthly: 'Gs 100.000',
+    monthlyNote: 'por mes de hosting',
     setup: 'Gs 650.000',
-    monthly: 'Gs 100.000/mes',
+    setupNote: 'cubre los primeros 7 meses',
     badge: null,
     popular: false,
     description:
-      'Tu primer sitio profesional con dominio propio. Los primeros 7 meses incluídos.',
+      'Tu primer sitio profesional con dominio propio.',
     features: [
-      { text: '7 meses con todas las features desbloqueadas', included: true },
+      { text: 'Sitio completo con dominio propio .com.py', included: true },
       { text: 'Hasta 5 páginas', included: true },
-      { text: 'Dominio propio .com.py incluido 1 año', included: true },
       { text: 'Hasta 15 fotos optimizadas', included: true },
       { text: 'Formulario + WhatsApp Business', included: true },
       { text: 'SEO básico + Google Maps', included: true },
       { text: '2 cambios de contenido al mes', included: true },
       { text: 'Soporte dedicado por WhatsApp', included: true },
+      { text: 'SSL + emails profesionales', included: true },
     ],
     cta: 'Comenzar Presencia',
     waMsg:
-      'Hola, me interesa el plan Presencia (Gs 650.000 + 100.000/mes).',
+      'Hola, me interesa el plan Presencia (Gs 100.000/mes + setup Gs 650.000 que cubre 7 meses).',
   },
   {
     id: 'crecimiento',
     name: 'Crecimiento',
+    monthly: 'Gs 150.000',
+    monthlyNote: 'por mes de hosting',
     setup: 'Gs 1.200.000',
-    monthly: 'Gs 150.000/mes',
+    setupNote: 'cubre los primeros 8 meses',
     badge: 'Más recomendado',
     popular: true,
     description:
-      'Reservas online, blog y catálogo de productos. Los primeros 8 meses incluídos.',
+      'Reservas online, blog y catálogo de productos.',
     features: [
-      { text: '8 meses con todas las features desbloqueadas', included: true },
       { text: 'Todo lo de Presencia + páginas ilimitadas', included: true },
       { text: 'Sistema de reservas online', included: true },
       { text: 'Catálogo con hasta 20 productos', included: true },
       { text: 'Blog + analytics avanzado', included: true },
       { text: 'SEO avanzado + Schema.org', included: true },
       { text: '5 cambios al mes + soporte prioritario', included: true },
-      { text: 'Emails profesionales', included: true },
+      { text: 'Emails profesionales con tu dominio', included: true },
     ],
     cta: 'Comenzar Crecimiento',
     waMsg:
-      'Hola, me interesa el plan Crecimiento (Gs 1.200.000 + 150.000/mes).',
+      'Hola, me interesa el plan Crecimiento (Gs 150.000/mes + setup Gs 1.200.000 que cubre 8 meses).',
   },
   {
     id: 'profesional',
     name: 'Profesional',
+    monthly: 'Gs 300.000',
+    monthlyNote: 'por mes de hosting',
     setup: 'Gs 2.200.000',
-    monthly: 'Gs 300.000/mes',
+    setupNote: 'pago único',
     badge: null,
     popular: false,
     description:
-      'Cadenas, franquicias y multi-sucursal. Experiencia Profesional completa, siempre.',
+      'Cadenas, franquicias y multi-sucursal. Sin límite de tiempo.',
     features: [
-      { text: 'Experiencia Profesional completa, siempre', included: true },
       { text: 'Todo lo de Crecimiento sin límite de tiempo', included: true },
       { text: 'Hasta 5 sucursales / locales', included: true },
       { text: 'Sitio multi-idioma (es/en/pt)', included: true },
@@ -550,7 +559,7 @@ export const PLANS = [
     ],
     cta: 'Hablar con ventas',
     waMsg:
-      'Hola, me interesa el plan Profesional (Gs 2.200.000 + 300.000/mes). Quiero hablar con ventas.',
+      'Hola, me interesa el plan Profesional (Gs 300.000/mes + setup Gs 2.200.000). Quiero hablar con ventas.',
   },
 ] as const
 
