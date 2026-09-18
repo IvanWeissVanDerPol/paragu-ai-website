@@ -31,12 +31,11 @@ jobs:
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
       - name: Deploy to Cloudflare Workers
-        # NOTE: do NOT pass --domain here. Domains are bound durably
-        # from the initial wrangler deploy; re-passing --domain triggers
-        # a /workers/services/ probe that 7003s in some CF regions,
-        # which fails the deploy even though the upload would succeed.
-        # To re-bind domains: run wrangler deploy --domain X locally.
-        run: npx opennextjs-cloudflare deploy
+        # Bypass opennextjs-cloudflare deploy (it invokes wrangler in CI mode,
+        # which hits a /workers/services/ probe that 7003s in some CF regions).
+        # Instead call wrangler deploy directly with --no-bundle (the
+        # opennextjs-cloudflare build already produced .open-next/).
+        run: npx wrangler deploy --no-bundle
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
