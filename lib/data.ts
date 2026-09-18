@@ -379,55 +379,84 @@ export const TEMPLATES = [
 export const STEPS = [
   {
     num: '01',
-    title: 'Contanos por WhatsApp',
-    desc: 'Nos mandás el nombre del negocio, servicios, precios y fotos. Sin formularios complicados.',
+    title: 'Mandanos tu negocio por WhatsApp',
+    desc: 'Nombre, dirección, fotos y qué ofrecés. Como mandar un audio a un amigo. Sin formularios.',
   },
   {
     num: '02',
-    title: 'Armamos tu demo',
-    desc: 'En 24 horas te mandamos un link con tu sitio listo. Lo revisás, pedís ajustes, y recién después pagás.',
+    title: 'En 48 horas ves tu sitio listo',
+    desc: 'Te mandamos el link para revisar. Pedís los cambios que quieras. Recién después de que confirmes que está bien, pagás.',
   },
   {
     num: '03',
-    title: 'Lanzamos y mantenemos',
-    desc: 'Publicamos en tu dominio .com.py con SSL, SEO y analytics. Cambios mensuales incluidos por WhatsApp.',
+    title: 'Salís en Google y te llegan consultas',
+    desc: 'Dominio propio, SEO listo, WhatsApp conectado. Empezás a recibir los clientes que antes iban a la competencia.',
   },
 ] as const
 
-// ── Features ──────────────────────────────────────────────────────────────────
+// ── Pain points (Section 2 of home) ─────────────────────────────────────────
+export const PAIN_POINTS = [
+  {
+    title: 'Si no aparecés en Google, no existís',
+    body: 'El 80% de tus clientes busca en el celu antes de salir. Si tu negocio no aparece cuando buscan "peluquería cerca de mí", van a tu competencia — no a vos.',
+  },
+  {
+    title: 'Tu Instagram no es tu tienda',
+    body: 'Un día te bloquean la cuenta, Meta te cambia las reglas, y perdés todo. Un sitio web es tuyo, te lo llevás donde quieras, nadie te lo puede sacar.',
+  },
+  {
+    title: 'Ya tenés clientes. Necesitás MÁS',
+    body: 'Los que ya te conocen te van a encontrar igual. El sitio te trae los que todavía no te conocen — los que están buscando tu servicio ahora mismo y no te encuentran.',
+  },
+] as const
+
+// ── Category social proof (Section 5 of home) ───────────────────────────────
+export const CATEGORY_PROOF = [
+  { cat: 'Peluquería',   client: 'Magnolia Peluquería', accent: 'rose' },
+  { cat: 'Barbería',     client: 'Portas Barber',       accent: 'amber' },
+  { cat: 'Gimnasio',     client: 'Cronos Academy',      accent: 'emerald' },
+  { cat: 'Spa',          client: 'Hidrobaby Spa',       accent: 'teal' },
+  { cat: 'Tatuajes',     client: 'Scott Tatuajes',      accent: 'fuchsia' },
+  { cat: 'Cervecería',   client: 'Trentina',            accent: 'orange' },
+  { cat: 'Restaurant',   client: 'Tsuki',               accent: 'orange' },
+  { cat: 'Eventos',      client: 'Maskarada',           accent: 'violet' },
+  { cat: 'Indumentaria', client: 'Superspuma',          accent: 'indigo' },
+] as const
+
+// ── Features (kept but reframed as benefits in their voice) ──────────────────
 export const FEATURES = [
   {
     title: 'Todo incluido',
-    desc: 'Diseño, textos, fotos, dominio, hosting, SEO y soporte. Vos no tocás nada.',
+    desc: 'Diseño, textos, fotos, dominio, hosting, SEO y soporte. Vos no tocás nada — solo nos mandás la info de tu negocio.',
   },
   {
     title: 'WhatsApp directo',
-    desc: 'Botón flotante que lleva directo a tu WhatsApp Business. Tus clientes te escriben con un clic.',
+    desc: 'Un botón que abre tu WhatsApp. El cliente te escribe y vos le contestás como siempre. Sin formularios que nadie llena.',
   },
   {
     title: 'Dominio propio',
-    desc: 'Tu URL profesional .com.py con SSL y emails incluidos el primer año.',
+    desc: 'Tu URL con tu nombre — tupeluqueria.com.py. Con candado SSL y emails profesionales incluidos el primer año.',
   },
   {
-    title: 'SEO integrado',
-    desc: 'Meta tags, Schema.org y contenido optimizado para aparecer en Google desde el día uno.',
+    title: 'Salís en Google',
+    desc: 'SEO listo desde el día uno. Cuando alguien busque tu servicio en Asunción, tu negocio aparece arriba.',
   },
   {
-    title: '100% responsive',
-    desc: 'Se ve perfecto en móvil, tablet y desktop. Optimizado para cómo miran tus clientes hoy.',
+    title: 'Se ve perfecto en el celu',
+    desc: 'El 70% de tus clientes te va a buscar desde el teléfono. Tu sitio se abre rápido y se ve bien, sin zoom ni scroll horizontal.',
   },
   {
-    title: 'Plantillas por rubro',
-    desc: 'Diseños especializados pensados para tu tipo de negocio. Arrancás con la base correcta y ajustamos a tu marca.',
+    title: 'Te lo mantenemos nosotros',
+    desc: 'Cambias el precio del corte, sumás un servicio nuevo, querés fotos distintas. Mandás un audio por WhatsApp y lo hacemos nosotros.',
   },
 ] as const
 
-// ── Guarantees ────────────────────────────────────────────────────────────────
+// ── Guarantees (reframed) ────────────────────────────────────────────────────
 export const GUARANTEES = [
-  { title: 'Demo antes de pagar', desc: 'Ves tu sitio primero, pagás después.' },
-  { title: '30 días de garantía', desc: 'Si no te convence, te devolvemos el setup.' },
-  { title: 'Uptime 99.9%', desc: 'Infraestructura en Cloudflare + Supabase.' },
-  { title: 'Sin permanencia', desc: 'Cancelás cuando quieras, te llevás tu dominio.' },
+  { title: 'Ves antes de pagar',     desc: 'Demo gratis. Si no te gusta, no perdés nada.' },
+  { title: '30 días para arrepentirte', desc: 'Te devolvemos el setup completo, sin preguntas.' },
+  { title: 'Tu sitio es tuyo',       desc: 'Dominio a tu nombre. Te lo llevás si te vas.' },
+  { title: 'Soporte por WhatsApp',   desc: 'Sin tickets, sin formularios. Como hablar con un amigo.' },
 ] as const
 
 // ── Plans ─────────────────────────────────────────────────────────────────────
@@ -525,52 +554,37 @@ export const PLANS = [
   },
 ] as const
 
-// ── FAQs ─────────────────────────────────────────────────────────────────────
+// ── FAQs (questions a peluquería owner would actually ask) ─────────────────
 export const FAQS = [
   {
-    q: '¿Cuánto tiempo tarda en estar listo mi sitio?',
-    a: 'Entre 24 y 48 horas desde que recibimos tus datos. Nuestro motor genera el sitio base en minutos y uneditor humano lo revisa, ajusta textos y optimiza imágenes antes de publicarlo.',
+    q: '¿Cuánto me sale en realidad?',
+    a: 'Depende del plan: arrancás con demo gratis (sin tarjeta). Después podés ir desde ₲650.000 de setup + ₲100.000 al mes, todo incluido. Si después querés algo más grande, vas al plan que sigue. Sin sorpresas en la factura.',
   },
   {
-    q: '¿Necesito conocimientos técnicos?',
-    a: 'Ninguno. Nosotros hacemos todo: diseño, textos, fotos, SEO, dominio y publicación. Vos nos mandás la info de tu negocio por WhatsApp y recibís el sitio listo.',
+    q: '¿Tengo que saber de tecnología?',
+    a: 'No. Hablamos por WhatsApp como con cualquier proveedor. Vos mandás la info de tu negocio — nombre, fotos, servicios, precios — y nosotros hacemos todo lo técnico.',
   },
   {
-    q: '¿Puedo probar antes de pagar?',
-    a: 'Sí. Todos los planes incluyen una demo gratuita de tu sitio antes de pagar. Además tenés 3 meses con experiencia Profesional completa sin costo. Después podés seguir gratis (con marca ParaguAI) o pasar a un plan pago.',
+    q: '¿Qué pasa si no me gusta el sitio?',
+    a: 'No pagás hasta que confirmes que te gusta. Y si después te arrepentís, tenés 30 días de garantía — te devolvemos el setup completo.',
   },
   {
-    q: '¿Cómo funciona el pago?',
-    a: 'Setup único al inicio (una sola vez) + cuota mensual para hosting, dominio y soporte. Aceptamos Mercado Pago y transferencia bancaria. Sin contratos de permanencia.',
+    q: '¿El sitio es mío de verdad?',
+    a: 'Sí. El dominio queda a tu nombre. Si un día querés irte con otra agencia, te llevás todo: dominio, contenido, fotos. Sin ataduras.',
   },
   {
-    q: '¿Qué incluye el dominio propio?',
-    a: 'Los planes pagos incluyen un dominio .com.py gratis el primer año, configuración DNS, certificado SSL automático y emails profesionales (tunombre@tunegocio.com.py).',
+    q: '¿Y si después quiero cambiar cosas?',
+    a: 'Mandás un audio por WhatsApp diciendo qué querés cambiar — un precio, una foto, un horario. Lo hacemos nosotros, sin límite de cambios por mes.',
   },
   {
-    q: '¿Puedo usar mi dominio existente?',
-    a: 'Sí, conectamos cualquier dominio que ya tengas sin costo extra. También te ayudamos a migrar desde Wix, WordPress o tu web actual.',
-  },
-  {
-    q: '¿Qué pasa si no me gusta?',
-    a: 'Tenés 30 días de garantía. Si el sitio no te convence, te devolvemos el setup completo. Sin preguntas.',
+    q: '¿Puedo usar mi dominio que ya tengo?',
+    a: 'Sí. Si ya compraste tupeluqueria.com.py en otra parte, lo conectamos sin costo. Si no tenés, te regalamos uno el primer año.',
   },
 ] as const
 
-// ── Testimonials ──────────────────────────────────────────────────────────────
-export const TESTIMONIALS = [
-  {
-    name: 'Rocio, DepiFlash',
-    business: 'Depilación láser IPL a domicilio',
-    quote:
-      'Mis clientas me encuentran en Google. Ya no dependo solo del boca a boca. Los primeros 15 días ya tenía 8 consultas nuevas.',
-    rating: 5,
-  },
-  {
-    name: 'Equipo Nexa Paraguay',
-    business: 'Nexa · Reubicación Europa → PY',
-    quote:
-      'Necesitábamos un sitio serio en 4 idiomas (ES/EN/DE/NL) para clientes europeos. ParaguAI lo entregó sin que toquemos código.',
-    rating: 5,
-  },
-] as const
+// ── Testimonials — REAL quotes only. Empty until we collect them. ─────────────
+// NOTE: do NOT fabricate. If you don't have a real screenshot of a WhatsApp
+// message from the client, leave this empty. Better no testimonial than a fake.
+export const TESTIMONIALS: Array<{
+  name: string; business: string; quote: string; rating: number
+}> = [] as const
