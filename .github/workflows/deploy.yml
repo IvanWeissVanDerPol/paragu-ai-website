@@ -30,12 +30,23 @@ jobs:
           NEXT_PUBLIC_WHATSAPP: ${{ secrets.NEXT_PUBLIC_WHATSAPP }}
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
-      - name: Deploy to Cloudflare Workers
-        # Bypass opennextjs-cloudflare deploy (it invokes wrangler in CI mode,
-        # which hits a /workers/services/ probe that 7003s in some CF regions).
-        # Instead call wrangler deploy directly with --no-bundle (the
-        # opennextjs-cloudflare build already produced .open-next/).
-        run: npx wrangler deploy --no-bundle
+      - name: Deploy to Cloudflare Workers (versions flow)
+        # Use opennextjs upload + wrangler versions deploy instead of
+        # `wrangler deploy` or `opennextjs-cloudflare deploy`. The latter
+        # both hit a /workers/services/{name} probe that returns 7003 in
+        # some CF regions, failing CI deploys. The versions flow doesn't
+        # probe: it uploads a new version then promotes it.
+        run: |
+          set -e
+          VERSION_OUTPUT=$(npx opennextjs-cloudflare upload 2>&1)
+          echo "$VERSION_OUTPUT"
+          VERSION_ID=$(echo "$VERSION_OUTPUT" | grep -oE 'Worker Version ID: [0-9a-f-]+' | awk '{print $NF}')
+          if [ -z "$VERSION_ID" ]; then
+            echo "ERROR: could not parse Worker Version ID from upload output"
+            exit 1
+          fi
+          echo "Promoting version $VERSION_ID to 100%"
+          npx wrangler versions deploy --version-id "$VERSION_ID" --percentage 100 --yes
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
