@@ -30,23 +30,24 @@ jobs:
           NEXT_PUBLIC_WHATSAPP: ${{ secrets.NEXT_PUBLIC_WHATSAPP }}
           NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
-      - name: Deploy to Cloudflare Workers (versions flow)
-        # Use opennextjs upload + wrangler versions deploy instead of
-        # `wrangler deploy` or `opennextjs-cloudflare deploy`. The latter
-        # both hit a /workers/services/{name} probe that returns 7003 in
-        # some CF regions, failing CI deploys. The versions flow doesn't
-        # probe: it uploads a new version then promotes it.
-        run: |
-          set -euxo pipefail
-          npx opennextjs-cloudflare upload > /tmp/upload.log 2>&1 || (cat /tmp/upload.log && exit 1)
-          cat /tmp/upload.log
-          VERSION_ID=$(grep -oE 'Worker Version ID: [0-9a-f-]+' /tmp/upload.log | awk '{print $NF}')
-          if [ -z "$VERSION_ID" ]; then
-            echo "ERROR: could not parse Worker Version ID from upload output" >&2
-            exit 1
-          fi
-          echo "Promoting version $VERSION_ID to 100%"
-          npx wrangler versions deploy --version-id "$VERSION_ID" --percentage 100 --yes
+      - name: Deploy to Cloudflare Workers
+        # CI DEPLOY NOTE (2026-09-18):
+        # `npx opennextjs-cloudflare deploy` and `npx wrangler deploy` both
+        # probe /workers/services/{name} before deploying. The probe
+        # returns 7003 in some CF regions (including GH Actions runners —
+        # YYZ works locally), causing CI deploys to fail with a misleading
+        # "Could not route" error even though the upload succeeds.
+        #
+        # Until CF fixes the regional routing or wrangler handles 7003 like
+        # 404 (treat worker as new), deploys from CI will keep failing.
+        #
+        # Workarounds in priority order:
+        #   1. Local deploy: clone repo, run `npm ci && npm run build &&
+        #      npx wrangler deploy --domain paragu-ai.com --domain www.paragu-ai.com`
+        #      Uses CF_MASTER_TOKEN from BWS.
+        #   2. Use scripts/cf-deploy.py (direct CF API, no wrangler probe).
+        #      Wired up via a follow-up deploy.yml change.
+        run: npx opennextjs-cloudflare deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
