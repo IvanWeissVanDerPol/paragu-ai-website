@@ -162,7 +162,7 @@ export default function PreciosPage() {
                         className="sticky left-0 z-10 bg-inherit px-5 py-3 text-left align-middle text-xs font-semibold text-gray-700"
                       >
                         {feat.label}
-                        {feat.note && (
+                        {'note' in feat && feat.note && (
                           <span className="block text-[10px] font-normal text-gray-400">
                             {feat.note}
                           </span>
@@ -257,7 +257,7 @@ export default function PreciosPage() {
                         return cell?.included
                       }).map((f) => {
                         const cell = plan.features[f.key as keyof typeof plan.features] as Cell | undefined
-                        const note = cell?.note
+                        const note = cell && cell.included ? cell.note : undefined
                         return (
                           <li key={f.key} className="flex items-start gap-2">
                             <Check size={14} className="mt-1 shrink-0 text-teal-600" />
