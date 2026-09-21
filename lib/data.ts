@@ -524,17 +524,16 @@ export const PLANS = [
   {
     id: 'presencia',
     name: 'Presencia',
-    monthly: 'Gs 100.000',
-    monthlyNote: 'por mes de hosting',
-    setup: 'Gs 300.000',
-    setupNote: 'cubre los primeros 3 meses',
+    monthly: 'Gs 80.000',
+    monthlyNote: 'por mes (anual Gs 800.000)',
+    setup: null,
     badge: null,
     popular: false,
     description:
       'Tu primer sitio profesional con dominio propio.',
     cta: 'Comenzar Presencia',
     waMsg:
-      'Hola, me interesa el plan Presencia (Gs 100.000/mes + setup Gs 300.000 que cubre 3 meses).',
+      'Hola, me interesa el plan Presencia (Gs 80.000/mes o Gs 800.000 anual).',
     features: {
       sitio:        { included: true },
       dominio:      { included: true },
@@ -555,17 +554,16 @@ export const PLANS = [
   {
     id: 'crecimiento',
     name: 'Crecimiento',
-    monthly: 'Gs 150.000',
-    monthlyNote: 'por mes de hosting',
-    setup: 'Gs 450.000',
-    setupNote: 'cubre los primeros 3 meses',
+    monthly: 'Gs 120.000',
+    monthlyNote: 'por mes (anual Gs 1.200.000)',
+    setup: null,
     badge: 'Más recomendado',
     popular: true,
     description:
       'Reservas online, blog y catálogo de productos.',
     cta: 'Comenzar Crecimiento',
     waMsg:
-      'Hola, me interesa el plan Crecimiento (Gs 150.000/mes + setup Gs 450.000 que cubre 3 meses).',
+      'Hola, me interesa el plan Crecimiento (Gs 120.000/mes o Gs 1.200.000 anual).',
     features: {
       sitio:        { included: true },
       dominio:      { included: true },
@@ -586,17 +584,16 @@ export const PLANS = [
   {
     id: 'profesional',
     name: 'Profesional',
-    monthly: 'Gs 300.000',
-    monthlyNote: 'por mes de hosting',
-    setup: 'Gs 900.000',
-    setupNote: 'cubre los primeros 3 meses',
+    monthly: 'Gs 180.000',
+    monthlyNote: 'por mes (anual Gs 1.800.000)',
+    setup: null,
     badge: null,
     popular: false,
     description:
-      'Cadenas, franquicias y multi-sucursal. Sin límite de tiempo.',
+      'Cadenas, franquicias y multi-sucursal.',
     cta: 'Hablar con ventas',
     waMsg:
-      'Hola, me interesa el plan Profesional (Gs 300.000/mes + setup Gs 900.000 que cubre 3 meses). Quiero hablar con ventas.',
+      'Hola, me interesa el plan Profesional (Gs 180.000/mes o Gs 1.800.000 anual). Quiero hablar con ventas.',
     features: {
       sitio:        { included: true },
       dominio:      { included: true },
@@ -620,7 +617,7 @@ export const PLANS = [
 export const FAQS = [
   {
     q: '¿Cuánto me sale en realidad?',
-    a: 'Depende del plan: arrancás con demo gratis (sin tarjeta). Después podés ir desde ₲650.000 de setup + ₲100.000 al mes, todo incluido. Si después querés algo más grande, vas al plan que sigue. Sin sorpresas en la factura.',
+    a: 'Arrancás con demo gratis (sin tarjeta). Después podés ir desde Gs 80.000 al mes (o Gs 800.000 anual). Sin sorpresas en la factura.',
   },
   {
     q: '¿Tengo que saber de tecnología?',
