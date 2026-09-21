@@ -44,12 +44,12 @@ export default function HomePage() {
               Portafolio público
             </span>
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight md:text-6xl">
-              Sitios que armamos para negocios paraguayos.
+              Crea tu sitio web para pymes.
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-              Cada uno es un negocio paraguayo real — peluquería, barbería, gimnasio,
-              spa, restaurante — con su dominio propio, su SEO y su WhatsApp. No son
-              plantillas vacías.
+              Creamos tu sitio web — para tu peluquería, tu gimnasio, tu restaurante,
+              tu pyme. Con dominio propio, SEO y WhatsApp. Hecho en Paraguay, para
+              Paraguay.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
