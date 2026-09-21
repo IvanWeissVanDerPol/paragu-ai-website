@@ -137,13 +137,7 @@ export default function PreciosPage() {
                             <span className={`block text-2xl font-extrabold tracking-tight ${theme.text}`}>
                               {plan.monthly}
                             </span>
-                            <span className="mt-0.5 block text-[11px] text-gray-500">por mes</span>
-                            {plan.setup && (
-                              <p className="mt-2 text-[11px] text-gray-500">
-                                <span className="font-semibold text-gray-700">{plan.setup}</span> setup
-                                <span className="block text-gray-400">{plan.setupNote}</span>
-                              </p>
-                            )}
+                            <span className="mt-0.5 block text-[11px] text-gray-500">{plan.monthlyNote}</span>
                           </div>
                         </th>
                       )
