@@ -49,10 +49,10 @@ export default function HomePage() {
                 Portafolio público
               </span>
               <h1 className="mt-5 font-sora text-4xl font-extrabold tracking-tight text-slate-900 md:text-6xl lg:text-5xl xl:text-6xl">
-                Crea un <span className="relative whitespace-nowrap">sitio web<span className="absolute bottom-0.5 left-0 right-0 h-0.5 bg-brand-200 -z-10 rounded-sm"></span></span> para tu pyme.
+                Tu sitio web para conseguir clientes.
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
-                Creamos tu sitio web — para tu peluquería, tu gimnasio, tu restaurante, tu pyme. Con dominio propio, SEO y WhatsApp. Hecho en Paraguay, para Paraguay.
+                Creamos tu presencia online — para tu peluquería, tu gimnasio, tu restaurante, tu pyme. Con dominio propio, SEO y WhatsApp. Hecho en Paraguay, para Paraguay.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
