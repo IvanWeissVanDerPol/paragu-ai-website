@@ -38,7 +38,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sora: ['Sora', 'system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },
