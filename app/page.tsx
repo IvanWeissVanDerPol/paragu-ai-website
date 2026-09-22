@@ -38,7 +38,7 @@ export default function HomePage() {
   return (
     <>
       <Nav />
-      <main className="pt-28 pb-24">
+      <main className="pt-28 pb-32 md:pb-24">
         {/* Hero - Light editorial with Sora type + image cascade */}
         <section className="mx-auto mb-10 max-w-6xl px-5 md:mb-14">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8 lg:items-center">
@@ -70,10 +70,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Browser-frame cascade */}
+            {/* Right: Browser-frame cascade - stacked on mobile, overlapping on desktop */}
             <div className="relative lg:col-span-6 lg:h-[430px]">
               {/* Back shot - Nudo */}
-              <div className="absolute right-[6%] top-0 z-10 w-[70%] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl lg:shadow-2xl">
+              <div className="mb-4 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl lg:absolute lg:right-[6%] lg:top-0 lg:z-10 lg:w-[70%] lg:shadow-2xl">
                 <div className="flex items-center gap-1.5 border-b border-gray-100 bg-gray-50 px-3 py-2">
                   <i className="h-2 w-2 rounded-full bg-red-400"></i>
                   <i className="h-2 w-2 rounded-full bg-yellow-400"></i>
@@ -90,7 +90,7 @@ export default function HomePage() {
                 </div>
               </div>
               {/* Front shot - Magnolia */}
-              <div className="absolute bottom-0 left-0 z-20 w-[70%] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
+              <div className="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl lg:absolute lg:bottom-0 lg:left-0 lg:z-20 lg:w-[70%]">
                 <div className="flex items-center gap-1.5 border-b border-gray-100 bg-gray-50 px-3 py-2">
                   <i className="h-2 w-2 rounded-full bg-red-400"></i>
                   <i className="h-2 w-2 rounded-full bg-yellow-400"></i>

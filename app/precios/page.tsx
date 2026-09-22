@@ -80,9 +80,9 @@ export default function PreciosPage() {
   return (
     <>
       <Nav />
-      <main className="bg-white">
+      <main className="bg-white pb-32 md:pb-20">
         {/* Hero */}
-        <section className="bg-gray-50 py-16 md:py-20">
+        <section className="bg-gray-50 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-5 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-700">
               Precios
