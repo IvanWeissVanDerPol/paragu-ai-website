@@ -70,10 +70,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Browser-frame cascade - stacked on mobile, overlapping on desktop */}
-            <div className="relative lg:col-span-6 lg:h-[430px]">
+            {/* Right: Browser-frame cascade - waterfall overlap on all screens */}
+            <div className="relative lg:col-span-6 lg:h-[430px] md:h-[320px] h-[240px]">
               {/* Back shot - Nudo */}
-              <div className="mb-4 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl lg:absolute lg:right-[6%] lg:top-0 lg:z-10 lg:w-[70%] lg:shadow-2xl">
+              <div className="absolute right-[4%] top-0 z-10 w-[65%] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl md:right-[5%] md:w-[68%] lg:right-[6%] lg:top-0 lg:z-10 lg:w-[70%] lg:shadow-2xl">
                 <div className="flex items-center gap-1.5 border-b border-gray-100 bg-gray-50 px-3 py-2">
                   <i className="h-2 w-2 rounded-full bg-red-400"></i>
                   <i className="h-2 w-2 rounded-full bg-yellow-400"></i>
@@ -85,12 +85,12 @@ export default function HomePage() {
                     alt="Nudo"
                     fill
                     className="object-cover object-top"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 70vw, 50vw"
                   />
                 </div>
               </div>
               {/* Front shot - Magnolia */}
-              <div className="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl lg:absolute lg:bottom-0 lg:left-0 lg:z-20 lg:w-[70%]">
+              <div className="absolute bottom-0 left-[5%] z-20 w-[65%] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl md:left-[6%] md:w-[68%] lg:bottom-0 lg:left-[8%] lg:z-20 lg:w-[70%]">
                 <div className="flex items-center gap-1.5 border-b border-gray-100 bg-gray-50 px-3 py-2">
                   <i className="h-2 w-2 rounded-full bg-red-400"></i>
                   <i className="h-2 w-2 rounded-full bg-yellow-400"></i>
@@ -102,7 +102,7 @@ export default function HomePage() {
                     alt="Magnolia Peluquería"
                     fill
                     className="object-cover object-top"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 70vw, 50vw"
                   />
                 </div>
               </div>
