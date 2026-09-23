@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-const NAV_ITEMS = [
+type NavItem = { href: string; label: string; icon: string } | { type: 'separator' }
+
+const NAV_ITEMS: NavItem[] = [
   { href: '/admin', label: 'Dashboard', icon: '📊' },
   { href: '/admin/leads', label: 'Leads', icon: '🎯' },
   { href: '/admin/clients', label: 'Clients', icon: '🏢' },
@@ -58,15 +60,17 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         {/* Nav */}
         <nav style={{ flex: 1, padding: '12px 8px' }}>
           {NAV_ITEMS.map((item, idx) => {
-            if (item.type === 'separator') {
+            if ('type' in item && item.type === 'separator') {
               return (
                 <div key={idx} style={{ height: 1, background: '#1a1a24', margin: '8px 12px' }} />
               )
             }
+            // TypeScript guard: item now has href
+            const navItem = item as { href: string; label: string; icon: string }
             return (
             <Link
-              key={item.href}
-              href={item.href}
+              key={navItem.href}
+              href={navItem.href}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -89,8 +93,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 e.currentTarget.style.color = '#999'
               }}
             >
-              <span style={{ fontSize: 18 }}>{item.icon}</span>
-              {sidebarOpen && item.label}
+              <span style={{ fontSize: 18 }}>{navItem.icon}</span>
+              {sidebarOpen && navItem.label}
             </Link>
             )
           })}
