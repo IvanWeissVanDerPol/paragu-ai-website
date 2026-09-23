@@ -12,6 +12,8 @@ const NAV_ITEMS = [
   { href: '/admin/deployments', label: 'Deployments', icon: '🚀' },
   { href: '/admin/repos', label: 'Repos', icon: '📦' },
   { href: '/admin/activity', label: 'Activity', icon: '📝' },
+  { type: 'separator' },
+  { href: '/admin/mburucuya', label: 'Mburucuyá', icon: '🌸' },
 ]
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -55,7 +57,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
         {/* Nav */}
         <nav style={{ flex: 1, padding: '12px 8px' }}>
-          {NAV_ITEMS.map((item) => (
+          {NAV_ITEMS.map((item, idx) => {
+            if (item.type === 'separator') {
+              return (
+                <div key={idx} style={{ height: 1, background: '#1a1a24', margin: '8px 12px' }} />
+              )
+            }
+            return (
             <Link
               key={item.href}
               href={item.href}
@@ -84,7 +92,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               <span style={{ fontSize: 18 }}>{item.icon}</span>
               {sidebarOpen && item.label}
             </Link>
-          ))}
+            )
+          })}
         </nav>
 
         {/* Toggle */}
