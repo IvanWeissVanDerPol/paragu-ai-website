@@ -34,7 +34,11 @@ export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
 
   // Public admin auth routes
-  if (pathname === '/admin/login' || pathname.startsWith('/api/admin/auth/')) {
+  if (
+    pathname === '/admin/login' ||
+    pathname === '/admin/login/' ||
+    pathname.startsWith('/api/admin/auth/')
+  ) {
     return NextResponse.next()
   }
 
