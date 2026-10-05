@@ -27,9 +27,14 @@ export default function AdminLoginPage() {
       return
     }
 
-    const next = typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search).get('next') || '/admin'
-      : '/admin'
+    const nextParam = typeof window !== 'undefined'
+      ? new URLSearchParams(window.location.search).get('next')
+      : null
+    // Sanitize: never redirect back to the login page itself, only to same-site /admin paths
+    const next =
+      nextParam && nextParam.startsWith('/admin') && !nextParam.startsWith('/admin/login')
+        ? nextParam
+        : '/admin'
     router.replace(next)
     router.refresh()
   }
