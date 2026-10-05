@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 const ADMIN_SESSION_COOKIE = 'paraguai_admin_session'
+const TIENDA_SESSION_COOKIE = 'mburucuya_admin_session'
 
 async function sign(payload: string, secret: string): Promise<string> {
   const enc = new TextEncoder()
@@ -33,6 +34,36 @@ async function isValidSession(token: string | undefined, secret: string): Promis
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
 
+  // ── Tienda (Mburucuyá Poty) admin — separate auth, separate cookie ──
+  if (pathname.startsWith('/tienda/admin') || pathname.startsWith('/api/tienda/')) {
+    // Public tienda auth routes
+    if (
+      pathname === '/tienda/admin/login' ||
+      pathname === '/tienda/admin/login/' ||
+      pathname.startsWith('/api/tienda/auth/')
+    ) {
+      return NextResponse.next()
+    }
+
+    const tiendaSecret = process.env.TIENDA_AUTH_SECRET
+    if (!tiendaSecret || tiendaSecret.length < 24) {
+      return new NextResponse('Tienda admin misconfigured: set TIENDA_AUTH_SECRET', { status: 503 })
+    }
+
+    const tiendaSession = req.cookies.get(TIENDA_SESSION_COOKIE)?.value
+    const tiendaOk = await isValidSession(tiendaSession, tiendaSecret)
+    if (tiendaOk) return NextResponse.next()
+
+    if (pathname.startsWith('/api/tienda/')) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    const tiendaLoginUrl = new URL('/tienda/admin/login', req.url)
+    tiendaLoginUrl.searchParams.set('next', pathname)
+    return NextResponse.redirect(tiendaLoginUrl)
+  }
+
+  // ── ParaguAI internal admin ──
   // Public admin auth routes
   if (
     pathname === '/admin/login' ||
@@ -61,5 +92,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/api/admin/:path*'],
+  matcher: ['/admin/:path*', '/api/admin/:path*', '/tienda/admin/:path*', '/api/tienda/:path*'],
 }

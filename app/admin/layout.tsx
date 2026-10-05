@@ -14,8 +14,6 @@ const NAV_ITEMS: NavItem[] = [
   { href: '/admin/deployments', label: 'Deployments', icon: '🚀' },
   { href: '/admin/repos', label: 'Repos', icon: '📦' },
   { href: '/admin/activity', label: 'Activity', icon: '📝' },
-  { type: 'separator' },
-  { href: '/admin/mburucuya', label: 'Mburucuyá', icon: '🌸' },
 ]
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {

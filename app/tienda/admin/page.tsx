@@ -149,7 +149,7 @@ export default function MburucuyaAdminPage() {
       <header className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800">
         <div className="flex items-center justify-between px-6 py-4">
           <div className="flex items-center gap-4">
-            <a href="/admin" className="text-gray-400 hover:text-white text-sm">← Volver al Admin</a>
+            <a href="/mburucuya" className="text-gray-400 hover:text-white text-sm">← Ver la tienda</a>
             <h1 className="text-xl font-bold">Mburucuyá Poty — Catálogo</h1>
           </div>
           <div className="flex items-center gap-4">
