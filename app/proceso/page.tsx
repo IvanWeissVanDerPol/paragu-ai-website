@@ -18,7 +18,7 @@ export default function ProcesoPage() {
     <>
       <Nav />
       <main className="bg-white">
-        <section className="bg-teal-700 pt-32 pb-20 text-white md:pt-40 md:pb-24">
+        <section className="bg-teal-700 pt-28 pb-20 text-white md:pt-40 md:pb-24">
           <div className="mx-auto max-w-3xl px-5">
             <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-white/60 transition-colors hover:text-white">
               <ArrowLeft size={14} /> Volver al inicio

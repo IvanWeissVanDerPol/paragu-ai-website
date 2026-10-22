@@ -15,7 +15,7 @@ export default function MetodoPage() {
   return (
     <>
       <Nav />
-      <main className="pt-36 pb-20">
+      <main className="pt-28 pb-32 md:pt-36 md:pb-20">
         <div className="mx-auto max-w-4xl px-5">
           <div className="mb-14 text-center">
             <span className="section-label">El proceso</span>

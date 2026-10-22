@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/assets"
+public_folder: "/assets"
+
+collections:
+  - name: "products"
+    label: "Productos"
+    folder: "data/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Brand Slug", name: "brand_slug", widget: "string"}
+      - {label: "Brand", name: "brand", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Size (ml)", name: "size_ml", widget: "number"}
+      - {label: "Gender", name: "gender", widget: "select", options: ["masculino", "femenino", "unisex"]}
+      - {label: "Category", name: "category", widget: "select", options: ["colonias", "perfume-infantil", "nicho-alta-perfumeria", "kits", "testers"]}
+      - {label: "Wholesale Price (USD)", name: "wholesale_price_usd", widget: "number", valueType: "float"}
+      - {label: "Retail Price (GS)", name: "retail_price_gs", widget: "number"}
+      - {label: "Image URL", name: "image", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+
+  - name: "brands"
+    label: "Marcas"
+    folder: "data/brands"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Product Count", name: "product_count", widget: "number", required: false}

@@ -80,9 +80,9 @@ export default function PreciosPage() {
   return (
     <>
       <Nav />
-      <main className="bg-white">
+      <main className="bg-white pb-32 md:pb-20">
         {/* Hero */}
-        <section className="bg-gray-50 py-16 md:py-20">
+        <section className="bg-gray-50 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-5 text-center">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-700">
               Precios
@@ -137,13 +137,7 @@ export default function PreciosPage() {
                             <span className={`block text-2xl font-extrabold tracking-tight ${theme.text}`}>
                               {plan.monthly}
                             </span>
-                            <span className="mt-0.5 block text-[11px] text-gray-500">por mes</span>
-                            {plan.setup && (
-                              <p className="mt-2 text-[11px] text-gray-500">
-                                <span className="font-semibold text-gray-700">{plan.setup}</span> setup
-                                <span className="block text-gray-400">{plan.setupNote}</span>
-                              </p>
-                            )}
+                            <span className="mt-0.5 block text-[11px] text-gray-500">{plan.monthlyNote}</span>
                           </div>
                         </th>
                       )

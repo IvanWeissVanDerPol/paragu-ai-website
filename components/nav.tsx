@@ -9,6 +9,7 @@ const links = [
   { href: '/', label: 'Portafolio' },
   { href: '/precios', label: 'Precios' },
   { href: '/metodo', label: 'Método' },
+  { href: '/mburucuya', label: 'Mburucuyá Poty', external: true },
 ]
 
 export function Nav() {
@@ -26,7 +27,11 @@ export function Nav() {
           <ul className="hidden items-center gap-8 text-sm font-medium text-gray-600 md:flex">
             {links.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="transition-colors hover:text-gray-900">
+                <Link 
+                  href={l.href} 
+                  {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="transition-colors hover:text-gray-900"
+                >
                   {l.label}
                 </Link>
               </li>

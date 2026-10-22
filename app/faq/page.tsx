@@ -26,7 +26,7 @@ export default function FAQPage() {
   return (
     <>
       <Nav />
-      <main className="pt-36 pb-20">
+      <main className="pt-28 pb-32 md:pt-36 md:pb-20">
         <div className="mx-auto max-w-3xl px-5">
           <div className="mb-12 text-center">
             <span className="section-label">FAQ</span>
